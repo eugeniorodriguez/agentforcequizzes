@@ -1,0 +1,732 @@
+{
+  "appVersion": "1.0",
+  "lastUpdated": "2026-02-18",
+  "products": [
+    {
+      "id": "salesforce-platform",
+      "title": "Salesforce Platform",
+      "description": "Sales productivity and collaboration topics in Salesforce.",
+      "concepts": [
+        {
+          "id": "sales-productivity-collaboration",
+          "title": "Productivity and Collaboration",
+          "description": "Best practices for activities, tasks, and team selling.",
+          "quizzes": [
+            {
+              "id": "sales-productivity-collaboration-basics",
+              "title": "Sales Productivity and Collaboration",
+              "description": "Test practical fundamentals of activities, task management, team collaboration, and productivity in Salesforce.",
+              "difficulty": "Intermediate",
+              "certification": "Sales Cloud",
+              "trailheadLinks": [
+                {
+                  "title": "Sales Team Collaboration",
+                  "url": "https://trailhead.salesforce.com/content/learn/modules/sales-team-collaboration?trail_id=become-a-selling-specialist"
+                },
+                {
+                  "title": "To-Do List for Task Management",
+                  "url": "https://trailhead.salesforce.com/content/learn/modules/to-do-list-for-task-management?trail_id=become-a-selling-specialist"
+                },
+                {
+                  "title": "Maximize Sales Productivity",
+                  "url": "https://trailhead.salesforce.com/content/learn/modules/sales_admin_maximize_productivity?trail_id=become-a-selling-specialist"
+                }
+              ],
+              "questions": [
+                {
+                  "id": "q1",
+                  "question": "What best describes Salesforce activities?",
+                  "options": [
+                    "Only dashboard components",
+                    "Tasks and events used to track work and meetings",
+                    "Products assigned to opportunities",
+                    "Case escalation rules"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "In Salesforce, activities are primarily tasks and events that capture follow-ups, calls, and meetings.",
+                  "hint": "Think about daily seller actions that must be tracked."
+                },
+                {
+                  "id": "q2",
+                  "question": "When should you create an event instead of a task?",
+                  "options": [
+                    "When no date is needed",
+                    "When work has a scheduled start and end time",
+                    "Only when creating leads",
+                    "Only after an opportunity is closed"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Events are time-bound calendar items, while tasks are action items that may not require a specific time slot.",
+                  "hint": "Calendar scheduling is the key difference."
+                },
+                {
+                  "id": "q3",
+                  "question": "What is a key benefit of Shared Activities?",
+                  "options": [
+                    "It replaces opportunity teams",
+                    "It lets one activity relate to multiple contacts",
+                    "It auto-closes all tasks",
+                    "It removes reminders"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Shared Activities allow one task or event to be associated with multiple contacts, improving collaboration context.",
+                  "hint": "Think of one meeting with several people."
+                },
+                {
+                  "id": "q4",
+                  "question": "Which records usually appear in Open Activities?",
+                  "options": [
+                    "Completed tasks and past events only",
+                    "Unfinished tasks and upcoming events",
+                    "Deleted activities only",
+                    "Only campaign tasks"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Open Activities focuses on pending work: tasks not completed and events that are still upcoming.",
+                  "hint": "Open means still actionable."
+                },
+                {
+                  "id": "q5",
+                  "question": "What is the main purpose of Activity History?",
+                  "options": [
+                    "Store only account ownership changes",
+                    "Show completed tasks and past events as historical context",
+                    "Replace all reports",
+                    "Create new leads automatically"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Activity History provides the timeline of completed work so teams can understand prior interactions.",
+                  "hint": "History answers “what already happened”."
+                },
+                {
+                  "id": "q6",
+                  "question": "After a discovery call, what is the most productive next action?",
+                  "options": [
+                    "Delete the related lead",
+                    "Create a follow-up task with owner and due date",
+                    "Close the opportunity as won immediately",
+                    "Wait for the customer to call back"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "A clear follow-up task with ownership and deadline keeps momentum and accountability.",
+                  "hint": "Capture the next step immediately."
+                },
+                {
+                  "id": "q7",
+                  "question": "Which task fields are most critical for day-to-day prioritization?",
+                  "options": [
+                    "Color theme and page layout",
+                    "Due date and priority",
+                    "Record ID only",
+                    "Debug log level"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Due date and priority help sellers decide what to do first and what can wait.",
+                  "hint": "Think urgency and importance."
+                },
+                {
+                  "id": "q8",
+                  "question": "How can list views help task management?",
+                  "options": [
+                    "By hiding all owners",
+                    "By filtering tasks by status, owner, and due date",
+                    "By deleting overdue tasks automatically",
+                    "By disabling reminders"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "List views provide targeted slices of work, which helps users focus and process tasks efficiently.",
+                  "hint": "Filtering creates focus."
+                },
+                {
+                  "id": "q9",
+                  "question": "Why use labels in a to-do workflow?",
+                  "options": [
+                    "To increase storage limits",
+                    "To categorize tasks by type or process stage",
+                    "To bypass sharing rules",
+                    "To disable calendar sync"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Labels group tasks by meaningful categories, improving triage and reporting.",
+                  "hint": "Labels are for classification."
+                },
+                {
+                  "id": "q10",
+                  "question": "What is a practical first step to personalize your to-do list?",
+                  "options": [
+                    "Remove all filters",
+                    "Create views aligned to your daily workflow",
+                    "Turn off activity tracking",
+                    "Archive all old tasks every morning"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Personalized views aligned to role and routine reduce noise and speed execution.",
+                  "hint": "Design the view around your routine."
+                },
+                {
+                  "id": "q11",
+                  "question": "How does a shared calendar improve sales productivity?",
+                  "options": [
+                    "It removes meeting notes",
+                    "It improves scheduling visibility and reduces conflicts",
+                    "It prevents account assignment",
+                    "It disables event reminders"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Shared visibility helps teams coordinate meetings and avoid overlapping commitments.",
+                  "hint": "Visibility prevents collisions."
+                },
+                {
+                  "id": "q12",
+                  "question": "What information is essential when creating an event?",
+                  "options": [
+                    "Only account rating",
+                    "Start/end time, participants, and related record",
+                    "Forecast category only",
+                    "Product family only"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Time, attendees, and context record are the core pieces to make an event actionable.",
+                  "hint": "Who, when, and what record."
+                },
+                {
+                  "id": "q13",
+                  "question": "What is the best way to reduce missed meetings?",
+                  "options": [
+                    "Disable all notifications",
+                    "Use event reminders and keep calendars updated",
+                    "Create events without participants",
+                    "Track meetings in spreadsheets only"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Reminders plus accurate calendar data reduce no-shows and last-minute confusion.",
+                  "hint": "Proactive notifications matter."
+                },
+                {
+                  "id": "q14",
+                  "question": "A rep needs specialist input on a deal. What collaboration action is most effective?",
+                  "options": [
+                    "Keep notes private and proceed alone",
+                    "Tag the specialist in a shared discussion with clear ask",
+                    "Close the opportunity to reopen later",
+                    "Delete previous activities"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Explicitly involving the right teammate with context speeds decision-making.",
+                  "hint": "Bring the right person in with context."
+                },
+                {
+                  "id": "q15",
+                  "question": "What is the primary benefit of Opportunity Teams?",
+                  "options": [
+                    "Automatic lead conversion",
+                    "Defined roles and shared visibility on deal execution",
+                    "Unlimited API calls",
+                    "Bypass validation rules"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Opportunity Teams clarify responsibilities and make collaboration explicit for each deal.",
+                  "hint": "Roles plus visibility."
+                },
+                {
+                  "id": "q16",
+                  "question": "When is an Account Team especially useful?",
+                  "options": [
+                    "For one-time anonymous web leads",
+                    "For long-term accounts with multiple internal stakeholders",
+                    "Only for closed-lost opportunities",
+                    "Only for partner users"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Account Teams are ideal when account coverage is ongoing and cross-functional.",
+                  "hint": "Think strategic account coverage."
+                },
+                {
+                  "id": "q17",
+                  "question": "What should a team do when several people own parts of the same deal?",
+                  "options": [
+                    "Avoid documenting ownership",
+                    "Define roles and next steps in shared records",
+                    "Split the opportunity into unrelated records",
+                    "Stop logging activities"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Shared ownership works best when responsibilities and actions are visible to everyone.",
+                  "hint": "Clarity prevents confusion."
+                },
+                {
+                  "id": "q18",
+                  "question": "What is a direct benefit of email integration with Salesforce?",
+                  "options": [
+                    "It disables activity history",
+                    "It reduces manual logging of customer communication",
+                    "It removes the need for tasks",
+                    "It prevents calendar usage"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Email integration helps capture communication in Salesforce with less manual effort.",
+                  "hint": "Less manual data entry."
+                },
+                {
+                  "id": "q19",
+                  "question": "A seller sends an important follow-up email. What should happen in Salesforce?",
+                  "options": [
+                    "Nothing; email should stay only in inbox",
+                    "The email should be logged to the relevant record timeline",
+                    "The opportunity should auto-close",
+                    "All tasks should be completed"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Logging the email preserves context for the team and supports accurate handoffs.",
+                  "hint": "Preserve account context."
+                },
+                {
+                  "id": "q20",
+                  "question": "How can a team keep inbox and CRM activity more aligned?",
+                  "options": [
+                    "Track only in personal notes",
+                    "Use supported email/calendar integration and activity sync policies",
+                    "Avoid linking emails to records",
+                    "Disable all user reminders"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Integration plus clear policy improves consistency between communication tools and Salesforce.",
+                  "hint": "Sync + process discipline."
+                },
+                {
+                  "id": "q21",
+                  "question": "What is the best Salesforce action when scheduling a customer meeting?",
+                  "options": [
+                    "Create a task without date/time",
+                    "Create an event linked to the customer record and invite attendees",
+                    "Create a new account record",
+                    "Close all open opportunities first"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "A linked event with attendees captures scheduling and context in one place.",
+                  "hint": "Use the calendar object for meetings."
+                },
+                {
+                  "id": "q22",
+                  "question": "What planning habit most improves weekly execution?",
+                  "options": [
+                    "Accept every meeting request immediately",
+                    "Time-block high-impact tasks on calendar",
+                    "Ignore due dates for flexibility",
+                    "Keep all tasks in status “Not Started”"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Time-blocking protects focused execution time for the most important work.",
+                  "hint": "Reserve time before it gets taken."
+                },
+                {
+                  "id": "q23",
+                  "question": "How should a rep surface urgent tasks quickly?",
+                  "options": [
+                    "Sort by random order",
+                    "Sort/filter by priority and near due dates",
+                    "Group by record ID only",
+                    "Hide overdue tasks"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Priority + due date views make urgent work visible immediately.",
+                  "hint": "Urgent = high priority + near deadline."
+                },
+                {
+                  "id": "q24",
+                  "question": "What is the best treatment for overdue tasks?",
+                  "options": [
+                    "Ignore them and create duplicates",
+                    "Review, re-prioritize, and assign realistic next due dates",
+                    "Delete all overdue items",
+                    "Mark all as completed without action"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Overdue tasks need triage and realistic replanning, not hidden or fake completion.",
+                  "hint": "Triage before action."
+                },
+                {
+                  "id": "q25",
+                  "question": "A manager wants visibility into rep follow-through. What helps most?",
+                  "options": [
+                    "Disabling activity tracking",
+                    "Activity reports and dashboards on task/event outcomes",
+                    "Only verbal updates in meetings",
+                    "Deleting old activities weekly"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Reporting on activities provides objective, scalable visibility into execution.",
+                  "hint": "Use measurable activity data."
+                },
+                {
+                  "id": "q26",
+                  "question": "After a customer meeting, what should be captured for clean handoff?",
+                  "options": [
+                    "Only meeting title",
+                    "Summary, decisions, and next action with owner",
+                    "Just opportunity amount",
+                    "Only contact phone number"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "A good handoff needs context plus assigned next actions, not just notes.",
+                  "hint": "Capture outcomes and ownership."
+                },
+                {
+                  "id": "q27",
+                  "question": "How can reps process many small tasks efficiently?",
+                  "options": [
+                    "Open each record in a new browser manually",
+                    "Use list views and quick actions in focused batches",
+                    "Export all tasks to spreadsheets daily",
+                    "Disable task statuses"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Batching work through list views and quick actions cuts context switching.",
+                  "hint": "Process similar work in batches."
+                },
+                {
+                  "id": "q28",
+                  "question": "How can teams reduce manual email/event tracking effort?",
+                  "options": [
+                    "Prohibit use of calendars",
+                    "Use supported activity capture/sync capabilities",
+                    "Track only in notes fields",
+                    "Create duplicate tasks for each email"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Capture/sync features reduce repetitive logging and improve data completeness.",
+                  "hint": "Automate repetitive capture where possible."
+                },
+                {
+                  "id": "q29",
+                  "question": "What should a rep do to avoid duplicate outreach by teammates?",
+                  "options": [
+                    "Hide activities from team members",
+                    "Review recent activities and coordinate ownership before outreach",
+                    "Delete prior call logs",
+                    "Create new duplicate contacts"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Checking recent activities and aligning ownership prevents redundant customer touches.",
+                  "hint": "Check timeline before contacting."
+                },
+                {
+                  "id": "q30",
+                  "question": "Which KPI best reflects task follow-through quality?",
+                  "options": [
+                    "Number of deleted tasks",
+                    "Percentage of tasks completed on time",
+                    "Number of tabs opened",
+                    "Total email signatures used"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "On-time completion rate directly measures reliability in execution.",
+                  "hint": "Measure completion against deadlines."
+                },
+                {
+                  "id": "q31",
+                  "question": "A phone call has already happened and needs to be recorded. Best object?",
+                  "options": [
+                    "Event with no date",
+                    "Task/Log a Call activity",
+                    "New campaign member",
+                    "Pricebook entry"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "A completed call is typically logged as a task-type activity (Log a Call).",
+                  "hint": "Think completed action record."
+                },
+                {
+                  "id": "q32",
+                  "question": "How should reps customize views for different work modes?",
+                  "options": [
+                    "Use one generic list for all contexts",
+                    "Create focused views by due date, priority, and record type",
+                    "Only use recently viewed",
+                    "Disable sorting to save time"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Different modes (prospecting, follow-up, renewals) need targeted queues of work.",
+                  "hint": "One queue rarely fits all workflows."
+                },
+                {
+                  "id": "q33",
+                  "question": "When should a task be marked completed?",
+                  "options": [
+                    "When the due date arrives, even if unfinished",
+                    "Immediately after the action is actually done",
+                    "Only at end of quarter",
+                    "As soon as it is created"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Task status should reflect reality to keep pipeline activity data trustworthy.",
+                  "hint": "Status should match actual execution."
+                },
+                {
+                  "id": "q34",
+                  "question": "Why link activities to account/opportunity/contact records?",
+                  "options": [
+                    "To reduce report availability",
+                    "To preserve full context for anyone working the record",
+                    "To increase duplicate records",
+                    "To hide collaboration"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Linked activities provide a shared timeline so any teammate can quickly understand context.",
+                  "hint": "Context should live with the record."
+                },
+                {
+                  "id": "q35",
+                  "question": "What is a strong end-of-day routine for task management?",
+                  "options": [
+                    "Delete incomplete tasks",
+                    "Review open tasks and plan top priorities for tomorrow",
+                    "Mark everything complete",
+                    "Turn off reminders permanently"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Daily review prevents carry-over chaos and improves next-day focus.",
+                  "hint": "Close the day by preparing the next one."
+                },
+                {
+                  "id": "q36",
+                  "question": "What is the best collaborative artifact after a customer call?",
+                  "options": [
+                    "Only private memory notes",
+                    "Shared summary with decisions and action items",
+                    "A new random opportunity",
+                    "No update to avoid noise"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "A concise shared summary accelerates team alignment and execution.",
+                  "hint": "Share decisions and next actions."
+                },
+                {
+                  "id": "q37",
+                  "question": "If email sync is temporarily unavailable, what is the best fallback?",
+                  "options": [
+                    "Stop customer communication",
+                    "Manually log key emails and next actions on related records",
+                    "Use personal notebooks only",
+                    "Delete all tasks until sync returns"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Manual fallback preserves critical continuity until automation is restored.",
+                  "hint": "Keep CRM context complete, even manually."
+                },
+                {
+                  "id": "q38",
+                  "question": "How can admins improve to-do list adoption across sales reps?",
+                  "options": [
+                    "Force one rigid process with no role differences",
+                    "Standardize statuses/labels and provide role-based training",
+                    "Remove all custom views",
+                    "Disable reports on tasks"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Adoption improves when governance is clear and training is tied to real role workflows.",
+                  "hint": "Combine standards with practical enablement."
+                },
+                {
+                  "id": "q39",
+                  "question": "Which practice improves data quality in activity management?",
+                  "options": [
+                    "Allow blank due dates and owners",
+                    "Require essential fields like owner, due date, and related record",
+                    "Hide status from users",
+                    "Avoid task completion tracking"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Required core fields make activity data usable for execution and reporting.",
+                  "hint": "No owner/date means no accountability."
+                },
+                {
+                  "id": "q40",
+                  "question": "What is a good strategy for high-volume follow-up work?",
+                  "options": [
+                    "Work tasks in random order all day",
+                    "Use themed work blocks (calls, emails, admin) with filtered queues",
+                    "Close all overdue tasks without review",
+                    "Avoid using calendar"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Themed batching reduces context switching and increases completion speed.",
+                  "hint": "Group similar actions together."
+                },
+                {
+                  "id": "q41",
+                  "question": "What should happen when a task is reassigned to another teammate?",
+                  "options": [
+                    "No context should be transferred",
+                    "Ownership plus clear notes and due date should be updated",
+                    "Task should be deleted and recreated later",
+                    "Opportunity should be closed"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Reassignment without context causes delays and errors; ownership and notes must travel together.",
+                  "hint": "Transfer both responsibility and context."
+                },
+                {
+                  "id": "q42",
+                  "question": "How does collaboration reduce deal risk?",
+                  "options": [
+                    "By minimizing visibility",
+                    "By exposing blockers early and assigning accountable actions",
+                    "By removing customer meetings",
+                    "By reducing record updates"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Early visibility of blockers enables faster intervention and better deal control.",
+                  "hint": "Surface risks before they become issues."
+                },
+                {
+                  "id": "q43",
+                  "question": "What is the best use of reminders in task management?",
+                  "options": [
+                    "Use reminders on every low-value item",
+                    "Use reminders on critical and time-sensitive commitments",
+                    "Disable all reminders permanently",
+                    "Use reminders only for closed records"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Targeted reminders protect high-risk commitments without creating notification fatigue.",
+                  "hint": "Prioritize reminder value."
+                },
+                {
+                  "id": "q44",
+                  "question": "Why keep opportunity activities up to date before pipeline reviews?",
+                  "options": [
+                    "To make reports less accurate",
+                    "To ensure coaching decisions are based on current execution data",
+                    "To hide rep workload",
+                    "To avoid manager questions"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Pipeline coaching is only as good as the freshness and accuracy of activity data.",
+                  "hint": "Fresh data improves coaching quality."
+                },
+                {
+                  "id": "q45",
+                  "question": "What is a practical way to avoid overloading reps with low-value tasks?",
+                  "options": [
+                    "Assign every idea as a task",
+                    "Define clear task creation criteria and prune noise regularly",
+                    "Disable opportunity updates",
+                    "Use only meetings, never tasks"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Clear criteria keeps task lists focused on meaningful, executable work.",
+                  "hint": "Quality of tasks beats quantity."
+                },
+                {
+                  "id": "q46",
+                  "question": "A rep handles prospecting and renewals. How should task queues be structured?",
+                  "options": [
+                    "One mixed queue with no distinction",
+                    "Separate queues/views by motion with different priority logic",
+                    "No queues, only calendar",
+                    "Use only closed tasks for planning"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Different sales motions have different urgency patterns and should be managed separately.",
+                  "hint": "Segment by workflow type."
+                },
+                {
+                  "id": "q47",
+                  "question": "What should be included in a high-quality follow-up task description?",
+                  "options": [
+                    "Only “Follow up” with no details",
+                    "Specific objective, context, and expected outcome",
+                    "A long legal disclaimer only",
+                    "No owner to keep it flexible"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Clear task descriptions improve execution quality and reduce back-and-forth.",
+                  "hint": "Make the task executable by anyone reading it."
+                },
+                {
+                  "id": "q48",
+                  "question": "How do activity records support better customer experience?",
+                  "options": [
+                    "By hiding previous interactions",
+                    "By giving every team member the same interaction context",
+                    "By replacing all customer conversations",
+                    "By preventing escalations"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Shared context allows consistent, informed conversations regardless of who engages next.",
+                  "hint": "Consistency comes from shared context."
+                },
+                {
+                  "id": "q49",
+                  "question": "Which habit most improves reliability in team selling execution?",
+                  "options": [
+                    "Rely on memory for all commitments",
+                    "Capture commitments as tasks/events with owners and dates",
+                    "Avoid updating records until month-end",
+                    "Keep only private calendars"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Explicit commitments with ownership and deadlines are the backbone of reliable execution.",
+                  "hint": "Document commitments, don’t rely on memory."
+                },
+                {
+                  "id": "q50",
+                  "question": "A team wants fewer missed follow-ups after meetings. Best improvement?",
+                  "options": [
+                    "Stop creating tasks after meetings",
+                    "Create follow-up tasks during or immediately after each meeting",
+                    "Only update opportunity amount",
+                    "Remove due dates to reduce pressure"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Immediate follow-up capture dramatically reduces dropped commitments.",
+                  "hint": "Capture next actions before context is lost."
+                },
+                {
+                  "id": "q51",
+                  "question": "What is the best reason to include a hint in quiz questions?",
+                  "options": [
+                    "To reveal the exact answer text every time",
+                    "To guide reasoning without removing challenge",
+                    "To replace explanations completely",
+                    "To reduce the number of options"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Hints should nudge the learner toward the right concept while preserving assessment value.",
+                  "hint": "Support thinking, not guessing."
+                },
+                {
+                  "id": "q52",
+                  "question": "Why is consistent activity logging important for team collaboration?",
+                  "options": [
+                    "It creates more admin work with no value",
+                    "It builds a shared source of truth for customer interactions",
+                    "It removes the need for communication",
+                    "It replaces opportunity stages"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Consistent logging keeps everyone aligned on what happened and what comes next.",
+                  "hint": "Shared truth reduces coordination friction."
+                },
+                {
+                  "id": "q53",
+                  "question": "What is the best way to keep a sales to-do system sustainable?",
+                  "options": [
+                    "Add every possible task with equal priority",
+                    "Continuously refine views, priorities, and cleanup habits",
+                    "Never review task process",
+                    "Avoid collaboration tools"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "A sustainable system is iterative: tune views, rules, and hygiene as work evolves.",
+                  "hint": "Treat task management as an evolving system."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

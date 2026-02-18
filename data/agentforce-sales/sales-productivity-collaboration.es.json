@@ -1,0 +1,732 @@
+{
+  "appVersion": "1.0",
+  "lastUpdated": "2026-02-18",
+  "products": [
+    {
+      "id": "salesforce-platform",
+      "title": "Plataforma Salesforce",
+      "description": "Temas de productividad y colaboración comercial en Salesforce.",
+      "concepts": [
+        {
+          "id": "sales-productivity-collaboration",
+          "title": "Productividad y Colaboración",
+          "description": "Buenas prácticas de actividades, tareas y trabajo en equipo.",
+          "quizzes": [
+            {
+              "id": "sales-productivity-collaboration-basics",
+              "title": "Productividad y Colaboración en Ventas",
+              "description": "Evalúa fundamentos prácticos sobre actividades, tareas, colaboración de equipo y productividad en Salesforce.",
+              "difficulty": "Intermedio",
+              "certification": "Sales Cloud",
+              "trailheadLinks": [
+                {
+                  "title": "Colaboración del Equipo de Ventas",
+                  "url": "https://trailhead.salesforce.com/content/learn/modules/sales-team-collaboration?trail_id=become-a-selling-specialist"
+                },
+                {
+                  "title": "Lista de Tareas para la Gestión de Trabajo",
+                  "url": "https://trailhead.salesforce.com/content/learn/modules/to-do-list-for-task-management?trail_id=become-a-selling-specialist"
+                },
+                {
+                  "title": "Maximiza la Productividad de Ventas",
+                  "url": "https://trailhead.salesforce.com/content/learn/modules/sales_admin_maximize_productivity?trail_id=become-a-selling-specialist"
+                }
+              ],
+              "questions": [
+                {
+                  "id": "q1",
+                  "question": "¿Qué describe mejor las actividades en Salesforce?",
+                  "options": [
+                    "Solo componentes de dashboard",
+                    "Tareas y eventos para registrar trabajo y reuniones",
+                    "Productos asignados a oportunidades",
+                    "Reglas de escalación de casos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "En Salesforce, las actividades son principalmente tareas y eventos para registrar seguimientos, llamadas y reuniones.",
+                  "hint": "Piensa en acciones diarias del vendedor que deben registrarse."
+                },
+                {
+                  "id": "q2",
+                  "question": "¿Cuándo debes crear un evento en lugar de una tarea?",
+                  "options": [
+                    "Cuando no se necesita fecha",
+                    "Cuando el trabajo tiene hora de inicio y fin programada",
+                    "Solo al crear leads",
+                    "Solo después de cerrar una oportunidad"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Los eventos son compromisos con horario en calendario; las tareas son acciones que pueden no requerir un bloque de tiempo.",
+                  "hint": "La programación en calendario es la diferencia clave."
+                },
+                {
+                  "id": "q3",
+                  "question": "¿Cuál es un beneficio clave de Shared Activities?",
+                  "options": [
+                    "Reemplaza los equipos de oportunidad",
+                    "Permite relacionar una actividad con múltiples contactos",
+                    "Cierra automáticamente todas las tareas",
+                    "Elimina recordatorios"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Shared Activities permite asociar una tarea o evento con varios contactos, mejorando el contexto colaborativo.",
+                  "hint": "Piensa en una reunión con varias personas."
+                },
+                {
+                  "id": "q4",
+                  "question": "¿Qué registros suelen aparecer en Open Activities?",
+                  "options": [
+                    "Solo tareas completadas y eventos pasados",
+                    "Tareas sin completar y eventos próximos",
+                    "Solo actividades eliminadas",
+                    "Solo tareas de campañas"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Open Activities se centra en trabajo pendiente: tareas no completadas y eventos futuros.",
+                  "hint": "Open significa que aún requiere acción."
+                },
+                {
+                  "id": "q5",
+                  "question": "¿Cuál es el propósito principal de Activity History?",
+                  "options": [
+                    "Guardar solo cambios de propietario de cuenta",
+                    "Mostrar tareas completadas y eventos pasados como contexto histórico",
+                    "Reemplazar todos los reportes",
+                    "Crear leads automáticamente"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Activity History entrega la línea de tiempo del trabajo ya realizado para entender interacciones previas.",
+                  "hint": "History responde “qué ya ocurrió”."
+                },
+                {
+                  "id": "q6",
+                  "question": "Después de una llamada de descubrimiento, ¿cuál es la siguiente acción más productiva?",
+                  "options": [
+                    "Eliminar el lead relacionado",
+                    "Crear una tarea de seguimiento con responsable y fecha límite",
+                    "Cerrar de inmediato la oportunidad como ganada",
+                    "Esperar a que el cliente vuelva a llamar"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Una tarea de seguimiento clara con dueño y fecha mantiene el avance y la responsabilidad.",
+                  "hint": "Registra el siguiente paso en el momento."
+                },
+                {
+                  "id": "q7",
+                  "question": "¿Qué campos de tarea son más críticos para priorizar el día a día?",
+                  "options": [
+                    "Tema de color y diseño de página",
+                    "Fecha límite y prioridad",
+                    "Solo ID del registro",
+                    "Nivel de log de depuración"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Fecha límite y prioridad ayudan a decidir qué hacer primero y qué puede esperar.",
+                  "hint": "Piensa en urgencia e importancia."
+                },
+                {
+                  "id": "q8",
+                  "question": "¿Cómo ayudan las vistas de lista en la gestión de tareas?",
+                  "options": [
+                    "Ocultando todos los responsables",
+                    "Filtrando tareas por estado, responsable y fecha límite",
+                    "Eliminando tareas vencidas automáticamente",
+                    "Desactivando recordatorios"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Las vistas de lista permiten enfocarse en bloques de trabajo concretos y procesar tareas de forma eficiente.",
+                  "hint": "Filtrar ayuda a enfocar."
+                },
+                {
+                  "id": "q9",
+                  "question": "¿Por qué usar etiquetas en un flujo de tareas?",
+                  "options": [
+                    "Para aumentar límites de almacenamiento",
+                    "Para categorizar tareas por tipo o etapa del proceso",
+                    "Para omitir reglas de compartición",
+                    "Para desactivar sincronización de calendario"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Las etiquetas agrupan tareas en categorías útiles para priorización y seguimiento.",
+                  "hint": "Las etiquetas clasifican trabajo."
+                },
+                {
+                  "id": "q10",
+                  "question": "¿Cuál es un primer paso práctico para personalizar tu lista de tareas?",
+                  "options": [
+                    "Quitar todos los filtros",
+                    "Crear vistas alineadas a tu flujo diario",
+                    "Desactivar el seguimiento de actividades",
+                    "Archivar todas las tareas antiguas cada mañana"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Vistas personalizadas según rol y rutina reducen ruido y aceleran la ejecución.",
+                  "hint": "Diseña la vista según tu día a día."
+                },
+                {
+                  "id": "q11",
+                  "question": "¿Cómo mejora la productividad de ventas un calendario compartido?",
+                  "options": [
+                    "Elimina notas de reuniones",
+                    "Mejora la visibilidad de agenda y reduce conflictos",
+                    "Impide asignar cuentas",
+                    "Desactiva recordatorios de eventos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La visibilidad compartida ayuda a coordinar reuniones y evitar solapamientos.",
+                  "hint": "La visibilidad evita choques de agenda."
+                },
+                {
+                  "id": "q12",
+                  "question": "¿Qué información es esencial al crear un evento?",
+                  "options": [
+                    "Solo el rating de cuenta",
+                    "Hora inicio/fin, participantes y registro relacionado",
+                    "Solo categoría de forecast",
+                    "Solo familia de producto"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Horario, asistentes y registro de contexto son la base para que un evento sea útil.",
+                  "hint": "Quién, cuándo y sobre qué registro."
+                },
+                {
+                  "id": "q13",
+                  "question": "¿Cuál es la mejor forma de reducir reuniones perdidas?",
+                  "options": [
+                    "Desactivar todas las notificaciones",
+                    "Usar recordatorios de eventos y mantener calendarios actualizados",
+                    "Crear eventos sin participantes",
+                    "Registrar reuniones solo en hojas de cálculo"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Recordatorios y calendarios actualizados reducen ausencias y confusiones de última hora.",
+                  "hint": "Las notificaciones anticipadas sí ayudan."
+                },
+                {
+                  "id": "q14",
+                  "question": "Un vendedor necesita apoyo de un especialista en un deal. ¿Qué acción colaborativa es más efectiva?",
+                  "options": [
+                    "Mantener notas privadas y avanzar solo",
+                    "Mencionar al especialista en una discusión compartida con pedido claro",
+                    "Cerrar la oportunidad para reabrirla después",
+                    "Eliminar actividades previas"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Involucrar a la persona correcta con contexto acelera decisiones y ejecución.",
+                  "hint": "Trae a la persona adecuada con contexto claro."
+                },
+                {
+                  "id": "q15",
+                  "question": "¿Cuál es el beneficio principal de Opportunity Teams?",
+                  "options": [
+                    "Conversión automática de leads",
+                    "Roles definidos y visibilidad compartida en la ejecución del deal",
+                    "Llamadas API ilimitadas",
+                    "Omitir reglas de validación"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Opportunity Teams aclara responsabilidades y hace explícita la colaboración en cada oportunidad.",
+                  "hint": "Roles claros y visibilidad común."
+                },
+                {
+                  "id": "q16",
+                  "question": "¿Cuándo es especialmente útil un Account Team?",
+                  "options": [
+                    "Para leads web anónimos de una sola vez",
+                    "Para cuentas de largo plazo con varios stakeholders internos",
+                    "Solo para oportunidades perdidas",
+                    "Solo para usuarios partner"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Account Teams funciona mejor cuando la gestión de la cuenta es continua y multifuncional.",
+                  "hint": "Piensa en cobertura estratégica de cuentas."
+                },
+                {
+                  "id": "q17",
+                  "question": "¿Qué debe hacer un equipo cuando varias personas llevan partes del mismo deal?",
+                  "options": [
+                    "Evitar documentar responsabilidades",
+                    "Definir roles y próximos pasos en registros compartidos",
+                    "Dividir la oportunidad en registros no relacionados",
+                    "Dejar de registrar actividades"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La propiedad compartida funciona mejor con responsabilidades y acciones visibles para todos.",
+                  "hint": "La claridad evita fricción."
+                },
+                {
+                  "id": "q18",
+                  "question": "¿Cuál es un beneficio directo de integrar email con Salesforce?",
+                  "options": [
+                    "Desactiva el historial de actividades",
+                    "Reduce el registro manual de comunicación con clientes",
+                    "Elimina la necesidad de tareas",
+                    "Impide usar calendario"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La integración de email ayuda a capturar comunicaciones en Salesforce con menos trabajo manual.",
+                  "hint": "Menos carga operativa manual."
+                },
+                {
+                  "id": "q19",
+                  "question": "Un vendedor envía un email de seguimiento importante. ¿Qué debería pasar en Salesforce?",
+                  "options": [
+                    "Nada; el email debe quedar solo en bandeja de entrada",
+                    "El email debe registrarse en la línea de tiempo del registro relacionado",
+                    "La oportunidad debe cerrarse automáticamente",
+                    "Todas las tareas deben marcarse como completadas"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Registrar el email preserva contexto para el equipo y facilita traspasos.",
+                  "hint": "Conserva el contexto en el CRM."
+                },
+                {
+                  "id": "q20",
+                  "question": "¿Cómo puede un equipo mantener más alineadas la bandeja de entrada y las actividades en CRM?",
+                  "options": [
+                    "Registrar solo en notas personales",
+                    "Usar integración soportada de email/calendario y políticas de sincronización",
+                    "Evitar vincular emails a registros",
+                    "Desactivar todos los recordatorios"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Integración más proceso claro mejora la consistencia entre herramientas de comunicación y Salesforce.",
+                  "hint": "Sincronización más disciplina operativa."
+                },
+                {
+                  "id": "q21",
+                  "question": "¿Cuál es la mejor acción en Salesforce al agendar una reunión con cliente?",
+                  "options": [
+                    "Crear una tarea sin fecha/hora",
+                    "Crear un evento vinculado al registro del cliente e invitar asistentes",
+                    "Crear una cuenta nueva",
+                    "Cerrar primero todas las oportunidades abiertas"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Un evento vinculado con asistentes guarda agenda y contexto en un solo lugar.",
+                  "hint": "Para reuniones, usa el objeto de calendario."
+                },
+                {
+                  "id": "q22",
+                  "question": "¿Qué hábito de planificación mejora más la ejecución semanal?",
+                  "options": [
+                    "Aceptar de inmediato todas las reuniones",
+                    "Bloquear en calendario tareas de mayor impacto",
+                    "Ignorar fechas límite para tener flexibilidad",
+                    "Mantener todas las tareas en “No iniciada”"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Bloquear tiempo protege ejecución enfocada para el trabajo más importante.",
+                  "hint": "Reserva tiempo antes de que se ocupe."
+                },
+                {
+                  "id": "q23",
+                  "question": "¿Cómo debería un vendedor visualizar rápidamente tareas urgentes?",
+                  "options": [
+                    "Ordenar aleatoriamente",
+                    "Ordenar/filtrar por prioridad y fechas próximas",
+                    "Agrupar solo por ID de registro",
+                    "Ocultar tareas vencidas"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Vistas por prioridad y fecha límite hacen visible lo urgente de inmediato.",
+                  "hint": "Urgente = alta prioridad + fecha cercana."
+                },
+                {
+                  "id": "q24",
+                  "question": "¿Cuál es el mejor tratamiento para tareas vencidas?",
+                  "options": [
+                    "Ignorarlas y crear duplicados",
+                    "Revisar, repriorizar y asignar nuevas fechas realistas",
+                    "Eliminar todas las vencidas",
+                    "Marcar todas como completadas sin ejecutar"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Las tareas vencidas requieren triage y replanificación realista, no ocultamiento.",
+                  "hint": "Primero clasifica, luego ejecuta."
+                },
+                {
+                  "id": "q25",
+                  "question": "Un manager quiere visibilidad del seguimiento comercial. ¿Qué ayuda más?",
+                  "options": [
+                    "Desactivar seguimiento de actividades",
+                    "Reportes y dashboards de actividades sobre tareas/eventos",
+                    "Solo actualizaciones verbales en reuniones",
+                    "Eliminar actividades antiguas semanalmente"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Los reportes de actividades entregan visibilidad objetiva y escalable de ejecución.",
+                  "hint": "Usa datos medibles de actividad."
+                },
+                {
+                  "id": "q26",
+                  "question": "Después de una reunión con cliente, ¿qué se debe registrar para un buen traspaso?",
+                  "options": [
+                    "Solo título de la reunión",
+                    "Resumen, decisiones y siguiente acción con responsable",
+                    "Solo monto de oportunidad",
+                    "Solo teléfono del contacto"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Un buen handoff necesita contexto y acciones asignadas, no solo notas.",
+                  "hint": "Registra resultado y dueño de la acción."
+                },
+                {
+                  "id": "q27",
+                  "question": "¿Cómo pueden los vendedores procesar muchas tareas pequeñas con eficiencia?",
+                  "options": [
+                    "Abrir cada registro en una pestaña nueva manualmente",
+                    "Usar vistas de lista y acciones rápidas por bloques de enfoque",
+                    "Exportar todas las tareas a planillas cada día",
+                    "Desactivar estados de tarea"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Trabajar por lotes con vistas de lista y acciones rápidas reduce cambio de contexto.",
+                  "hint": "Agrupa trabajo similar."
+                },
+                {
+                  "id": "q28",
+                  "question": "¿Cómo pueden los equipos reducir el esfuerzo manual de registro de emails/eventos?",
+                  "options": [
+                    "Prohibir el uso de calendarios",
+                    "Usar capacidades soportadas de captura/sincronización de actividades",
+                    "Registrar todo solo en notas",
+                    "Crear tareas duplicadas por cada email"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Las capacidades de captura/sincronización reducen trabajo repetitivo y mejoran completitud de datos.",
+                  "hint": "Automatiza la captura repetitiva cuando se pueda."
+                },
+                {
+                  "id": "q29",
+                  "question": "¿Qué debe hacer un vendedor para evitar contacto duplicado por parte del equipo?",
+                  "options": [
+                    "Ocultar actividades al equipo",
+                    "Revisar actividades recientes y coordinar responsables antes de contactar",
+                    "Eliminar registros de llamadas anteriores",
+                    "Crear contactos duplicados"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Revisar historial reciente y alinear responsabilidades evita contactos redundantes al cliente.",
+                  "hint": "Revisa la línea de tiempo antes de contactar."
+                },
+                {
+                  "id": "q30",
+                  "question": "¿Qué KPI refleja mejor la calidad del seguimiento de tareas?",
+                  "options": [
+                    "Cantidad de tareas eliminadas",
+                    "Porcentaje de tareas completadas a tiempo",
+                    "Número de pestañas abiertas",
+                    "Total de firmas de email usadas"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La tasa de cumplimiento en plazo mide directamente la confiabilidad en ejecución.",
+                  "hint": "Mide cumplimiento frente a fechas límite."
+                },
+                {
+                  "id": "q31",
+                  "question": "Una llamada ya ocurrió y hay que registrarla. ¿Qué objeto es mejor?",
+                  "options": [
+                    "Evento sin fecha",
+                    "Actividad tipo tarea/registro de llamada",
+                    "Nuevo miembro de campaña",
+                    "Entrada de lista de precios"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Una llamada realizada normalmente se registra como actividad tipo tarea (Log a Call).",
+                  "hint": "Piensa en registro de acción completada."
+                },
+                {
+                  "id": "q32",
+                  "question": "¿Cómo deberían personalizar los vendedores sus vistas según tipo de trabajo?",
+                  "options": [
+                    "Usar una sola lista genérica para todo",
+                    "Crear vistas enfocadas por fecha, prioridad y tipo de registro",
+                    "Usar solo “visto recientemente”",
+                    "Desactivar ordenamiento para ahorrar tiempo"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Distintos modos de trabajo (prospección, seguimiento, renovaciones) requieren colas enfocadas.",
+                  "hint": "Una sola cola no cubre todos los flujos."
+                },
+                {
+                  "id": "q33",
+                  "question": "¿Cuándo debe marcarse una tarea como completada?",
+                  "options": [
+                    "Cuando llega la fecha aunque no esté hecha",
+                    "Inmediatamente después de ejecutar realmente la acción",
+                    "Solo al final del trimestre",
+                    "Apenas se crea"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El estado de la tarea debe reflejar realidad para mantener datos confiables.",
+                  "hint": "El estado debe coincidir con lo ejecutado."
+                },
+                {
+                  "id": "q34",
+                  "question": "¿Por qué vincular actividades a cuentas/oportunidades/contactos?",
+                  "options": [
+                    "Para reducir disponibilidad de reportes",
+                    "Para conservar contexto completo para quien trabaje el registro",
+                    "Para aumentar duplicados",
+                    "Para ocultar colaboración"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Las actividades vinculadas entregan una línea de tiempo compartida para entender contexto rápidamente.",
+                  "hint": "El contexto debe vivir en el registro."
+                },
+                {
+                  "id": "q35",
+                  "question": "¿Cuál es una rutina fuerte de fin de día para gestionar tareas?",
+                  "options": [
+                    "Eliminar tareas incompletas",
+                    "Revisar tareas abiertas y planificar prioridades de mañana",
+                    "Marcar todo como completado",
+                    "Apagar recordatorios permanentemente"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Una revisión diaria evita caos acumulado y mejora foco al día siguiente.",
+                  "hint": "Cierra el día preparando el próximo."
+                },
+                {
+                  "id": "q36",
+                  "question": "¿Cuál es el mejor artefacto colaborativo después de una llamada con cliente?",
+                  "options": [
+                    "Solo notas privadas de memoria",
+                    "Resumen compartido con decisiones y acciones",
+                    "Una oportunidad nueva aleatoria",
+                    "No actualizar para evitar ruido"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Un resumen compartido y conciso acelera alineación y ejecución del equipo.",
+                  "hint": "Comparte decisiones y siguientes pasos."
+                },
+                {
+                  "id": "q37",
+                  "question": "Si la sincronización de email no está disponible temporalmente, ¿cuál es el mejor plan B?",
+                  "options": [
+                    "Detener comunicación con clientes",
+                    "Registrar manualmente emails clave y próximas acciones en registros relacionados",
+                    "Usar solo cuadernos personales",
+                    "Eliminar tareas hasta que vuelva la sincronización"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El fallback manual preserva continuidad crítica hasta recuperar la automatización.",
+                  "hint": "Mantén completo el contexto del CRM, aunque sea manual."
+                },
+                {
+                  "id": "q38",
+                  "question": "¿Cómo pueden admins mejorar la adopción de listas de tareas en el equipo comercial?",
+                  "options": [
+                    "Forzar un proceso rígido sin diferencias por rol",
+                    "Estandarizar estados/etiquetas y capacitar por rol",
+                    "Eliminar todas las vistas personalizadas",
+                    "Desactivar reportes de tareas"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La adopción mejora cuando hay gobierno claro y entrenamiento ligado al trabajo real.",
+                  "hint": "Combina estándar común con habilitación práctica."
+                },
+                {
+                  "id": "q39",
+                  "question": "¿Qué práctica mejora la calidad de datos en gestión de actividades?",
+                  "options": [
+                    "Permitir fechas y responsables vacíos",
+                    "Exigir campos esenciales como responsable, fecha y registro relacionado",
+                    "Ocultar estado a usuarios",
+                    "Evitar seguimiento de completitud"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Campos clave obligatorios hacen que los datos de actividad sean útiles para ejecución y reportes.",
+                  "hint": "Sin responsable/fecha no hay accountability."
+                },
+                {
+                  "id": "q40",
+                  "question": "¿Cuál es una buena estrategia para alto volumen de seguimiento?",
+                  "options": [
+                    "Trabajar tareas en orden aleatorio todo el día",
+                    "Usar bloques temáticos (llamadas, emails, admin) con colas filtradas",
+                    "Cerrar todas las vencidas sin revisar",
+                    "Evitar usar calendario"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Trabajar por bloques temáticos reduce cambio de contexto y aumenta velocidad de cierre.",
+                  "hint": "Agrupa acciones similares."
+                },
+                {
+                  "id": "q41",
+                  "question": "¿Qué debería pasar cuando una tarea se reasigna a otro compañero?",
+                  "options": [
+                    "No se debe transferir contexto",
+                    "Actualizar responsable con notas claras y fecha límite",
+                    "Eliminar la tarea y recrearla después",
+                    "Cerrar la oportunidad"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Reasignar sin contexto genera retrasos y errores; deben viajar responsabilidad y detalle.",
+                  "hint": "Transfiere dueño y contexto."
+                },
+                {
+                  "id": "q42",
+                  "question": "¿Cómo reduce riesgo de cierre la colaboración?",
+                  "options": [
+                    "Minimizando visibilidad",
+                    "Visibilizando bloqueos temprano y asignando acciones responsables",
+                    "Eliminando reuniones con clientes",
+                    "Reduciendo actualizaciones de registros"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Detectar bloqueos temprano permite intervenir antes y controlar mejor el deal.",
+                  "hint": "Visibiliza riesgos antes de que escalen."
+                },
+                {
+                  "id": "q43",
+                  "question": "¿Cuál es el mejor uso de recordatorios en gestión de tareas?",
+                  "options": [
+                    "Usarlos en todo, incluso tareas de bajo valor",
+                    "Usarlos en compromisos críticos y sensibles al tiempo",
+                    "Desactivarlos permanentemente",
+                    "Usarlos solo en registros cerrados"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Recordatorios selectivos protegen compromisos críticos sin fatiga de notificaciones.",
+                  "hint": "Prioriza dónde el recordatorio realmente agrega valor."
+                },
+                {
+                  "id": "q44",
+                  "question": "¿Por qué mantener actividades de oportunidad al día antes de revisión de pipeline?",
+                  "options": [
+                    "Para que los reportes sean menos precisos",
+                    "Para que decisiones de coaching se basen en ejecución real y actual",
+                    "Para ocultar carga del vendedor",
+                    "Para evitar preguntas del manager"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El coaching de pipeline depende de la calidad y vigencia de datos de actividad.",
+                  "hint": "Datos frescos mejoran decisiones."
+                },
+                {
+                  "id": "q45",
+                  "question": "¿Cuál es una forma práctica de evitar sobrecargar a vendedores con tareas de bajo valor?",
+                  "options": [
+                    "Convertir cada idea en una tarea",
+                    "Definir criterios claros de creación y limpiar ruido regularmente",
+                    "Desactivar actualizaciones de oportunidad",
+                    "Usar solo reuniones, nunca tareas"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Criterios claros mantienen las listas enfocadas en trabajo realmente ejecutable.",
+                  "hint": "La calidad de tareas importa más que la cantidad."
+                },
+                {
+                  "id": "q46",
+                  "question": "Un vendedor lleva prospección y renovaciones. ¿Cómo estructurar sus colas de tareas?",
+                  "options": [
+                    "Una sola cola mezclada sin distinción",
+                    "Colas/vistas separadas por tipo de trabajo con lógica de prioridad distinta",
+                    "Sin colas, solo calendario",
+                    "Usar solo tareas cerradas para planificar"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Distintos tipos de venta tienen patrones de urgencia distintos y conviene separarlos.",
+                  "hint": "Segmenta por flujo de trabajo."
+                },
+                {
+                  "id": "q47",
+                  "question": "¿Qué debe incluir una descripción de tarea de seguimiento de alta calidad?",
+                  "options": [
+                    "Solo “Hacer seguimiento” sin detalle",
+                    "Objetivo específico, contexto y resultado esperado",
+                    "Solo un aviso legal largo",
+                    "Sin responsable para mayor flexibilidad"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Descripciones claras mejoran calidad de ejecución y reducen idas y vueltas.",
+                  "hint": "Haz que la tarea sea ejecutable para cualquiera."
+                },
+                {
+                  "id": "q48",
+                  "question": "¿Cómo apoyan las actividades una mejor experiencia de cliente?",
+                  "options": [
+                    "Ocultando interacciones anteriores",
+                    "Dando a todo el equipo el mismo contexto de interacciones",
+                    "Reemplazando todas las conversaciones con clientes",
+                    "Evitando escalaciones"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El contexto compartido permite conversaciones consistentes e informadas sin importar quién atienda.",
+                  "hint": "La consistencia nace del contexto común."
+                },
+                {
+                  "id": "q49",
+                  "question": "¿Qué hábito mejora más la confiabilidad en ejecución de venta colaborativa?",
+                  "options": [
+                    "Confiar en memoria para todos los compromisos",
+                    "Registrar compromisos como tareas/eventos con dueño y fecha",
+                    "Evitar actualizar registros hasta fin de mes",
+                    "Mantener solo calendarios privados"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Compromisos explícitos con responsable y fecha son la base de una ejecución confiable.",
+                  "hint": "Documenta compromisos, no dependas de memoria."
+                },
+                {
+                  "id": "q50",
+                  "question": "Un equipo quiere menos seguimientos perdidos después de reuniones. ¿Mejora más efectiva?",
+                  "options": [
+                    "Dejar de crear tareas después de reuniones",
+                    "Crear tareas de seguimiento durante o inmediatamente después de cada reunión",
+                    "Actualizar solo monto de oportunidad",
+                    "Quitar fechas límite para reducir presión"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Registrar seguimientos de inmediato reduce fuertemente compromisos olvidados.",
+                  "hint": "Captura próximos pasos antes de perder el contexto."
+                },
+                {
+                  "id": "q51",
+                  "question": "¿Cuál es la mejor razón para incluir “hint” en preguntas de quiz?",
+                  "options": [
+                    "Revelar siempre la respuesta exacta",
+                    "Guiar el razonamiento sin quitar desafío",
+                    "Reemplazar completamente la explicación",
+                    "Reducir cantidad de opciones"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Un hint debe orientar al concepto correcto manteniendo valor evaluativo.",
+                  "hint": "Apoya pensamiento, no adivinanza."
+                },
+                {
+                  "id": "q52",
+                  "question": "¿Por qué es importante registrar actividades de forma consistente para colaborar mejor?",
+                  "options": [
+                    "Porque agrega trabajo administrativo sin valor",
+                    "Porque crea una fuente compartida de verdad sobre interacciones",
+                    "Porque elimina necesidad de comunicación",
+                    "Porque reemplaza etapas de oportunidad"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Registro consistente mantiene al equipo alineado sobre lo ocurrido y lo siguiente.",
+                  "hint": "Fuente común de verdad reduce fricción."
+                },
+                {
+                  "id": "q53",
+                  "question": "¿Cuál es la mejor forma de mantener sostenible un sistema de tareas comercial?",
+                  "options": [
+                    "Agregar todas las tareas posibles con la misma prioridad",
+                    "Refinar continuamente vistas, prioridades y hábitos de limpieza",
+                    "Nunca revisar el proceso de tareas",
+                    "Evitar herramientas de colaboración"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Un sistema sostenible es iterativo: ajusta vistas, reglas y hábitos conforme evoluciona el trabajo.",
+                  "hint": "Gestionar tareas también requiere mejora continua."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
