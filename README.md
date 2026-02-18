@@ -37,10 +37,12 @@ Question shape:
 Do **not** mix Spanish and English in the same field.
 No mezclar espanol e ingles en el mismo campo.
 
-Use one monolingual JSON per language:
+Use one monolingual JSON **per quiz** and per language:
 
-- `data/agentforce-sales/sales-productivity-collaboration.es.json`
-- `data/agentforce-sales/sales-productivity-collaboration.en.json`
+- `data/agentforce-sales/sales-productivity-collaboration-001.es.json`
+- `data/agentforce-sales/sales-productivity-collaboration-002.es.json`
+- `data/agentforce-sales/sales-productivity-collaboration-001.en.json`
+- `data/agentforce-sales/sales-productivity-collaboration-002.en.json`
 
 ## Quiz Numbering Strategy (001..999)
 
@@ -53,11 +55,11 @@ To avoid overwriting and keep order:
 
 ## Current Dataset
 
-- Product: `salesforce-platform`
+- Product: `agentforce-sales`
 - Concept: `sales-productivity-collaboration`
 - Quizzes:
-  - `sales-productivity-collaboration-001` (`quizNumber: "001"`) - 53 preguntas
-  - `sales-productivity-collaboration-002` (`quizNumber: "002"`) - 25 preguntas
+  - `sales-productivity-collaboration-001` (`quizNumber: "001"`) - 53 preguntas (ES/EN)
+  - `sales-productivity-collaboration-002` (`quizNumber: "002"`) - 100 preguntas (ES), 25 preguntas (EN)
 
 ## GitHub Pages
 
@@ -67,8 +69,11 @@ To avoid overwriting and keep order:
 ## Validation Commands
 
 ```bash
-jq empty data/agentforce-sales/sales-productivity-collaboration.es.json
-jq empty data/agentforce-sales/sales-productivity-collaboration.en.json
-jq '.products[0].concepts[0].quizzes | map({id, quizNumber, total: (.questions|length)})' data/agentforce-sales/sales-productivity-collaboration.es.json
-jq -r '.products[0].concepts[0].quizzes[].quizNumber' data/agentforce-sales/sales-productivity-collaboration.es.json | awk 'BEGIN{ok=1} {if($0 !~ /^[0-9]{3}$/){ok=0; print "Invalid quizNumber:", $0; exit 1}} END{if(ok) print "QUIZ_NUMBERS_OK"}'
+jq empty data/agentforce-sales/sales-productivity-collaboration-001.es.json
+jq empty data/agentforce-sales/sales-productivity-collaboration-002.es.json
+jq empty data/agentforce-sales/sales-productivity-collaboration-001.en.json
+jq empty data/agentforce-sales/sales-productivity-collaboration-002.en.json
+
+jq '.products[0].concepts[0].quizzes[0] | {id, quizNumber, total: (.questions|length)}' data/agentforce-sales/sales-productivity-collaboration-001.es.json
+jq '.products[0].concepts[0].quizzes[0] | {id, quizNumber, total: (.questions|length)}' data/agentforce-sales/sales-productivity-collaboration-002.es.json
 ```

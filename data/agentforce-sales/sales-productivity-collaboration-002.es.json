@@ -1,0 +1,1344 @@
+{
+  "appVersion": "1.0",
+  "lastUpdated": "2026-02-18",
+  "products": [
+    {
+      "id": "agentforce-sales",
+      "title": "Agentforce Sales",
+      "description": "Quizzes de ventas",
+      "concepts": [
+        {
+          "id": "sales-productivity-collaboration",
+          "title": "Productividad y Colaboración",
+          "description": "Banco de preguntas centrado en la optimización de la productividad del vendedor y la colaboración interna mediante herramientas de Salesforce, Slack, Quip y gestión de actividades.",
+          "quizzes": [
+            {
+              "id": "sales-productivity-collaboration-002",
+              "quizNumber": "002",
+              "title": "Evaluación de Productividad y Colaboración en Sales Cloud",
+              "description": "Banco de preguntas centrado en la optimización de la productividad del vendedor y la colaboración interna mediante herramientas de Salesforce, Slack, Quip y gestión de actividades.",
+              "difficulty": "Intermedio",
+              "certification": "Sales Cloud",
+              "trailheadLinks": [
+                {
+                  "title": "Sales Team Collaboration",
+                  "url": "https://trailhead.salesforce.com/content/learn/modules/sales-team-collaboration"
+                },
+                {
+                  "title": "Maximize Sales Productivity",
+                  "url": "https://trailhead.salesforce.com/content/learn/modules/sales_admin_maximize_productivity"
+                },
+                {
+                  "title": "To-Do List for Task Management",
+                  "url": "https://trailhead.salesforce.com/content/learn/modules/to-do-list-for-task-management"
+                }
+              ],
+              "questions": [
+                {
+                  "id": "q1",
+                  "question": "¿Cuál es la principal analogía utilizada para describir a un equipo de ventas colaborativo?",
+                  "options": [
+                    "Un equipo de relevos de atletismo",
+                    "Una banda de música donde cada miembro toca un instrumento",
+                    "Un equipo de mecánicos de carreras",
+                    "Una tripulación de vuelo"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La documentación compara a los vendedores con músicos solistas que mejoran su rendimiento con el respaldo de una 'banda' (patrocinadores, ingenieros, soporte).",
+                  "hint": "Piense en Stevie Nicks."
+                },
+                {
+                  "id": "q2",
+                  "question": "En la metáfora de la banda de colaboración, ¿qué rol desempeña el 'Patrocinador Ejecutivo'?",
+                  "options": [
+                    "Voz principal",
+                    "Guitarra",
+                    "Batería",
+                    "Teclado"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Según el modelo de colaboración 'Sell as a Team', el patrocinador ejecutivo asume el papel de la guitarra en el equipo.",
+                  "hint": "Un rol de soporte armónico y liderazgo."
+                },
+                {
+                  "id": "q3",
+                  "question": "¿Quién asume el rol de la 'Batería' en el equipo de colaboración de ventas?",
+                  "options": [
+                    "El representante de ventas",
+                    "El ingeniero de ventas",
+                    "El soporte técnico",
+                    "El encargado de marketing"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El ingeniero de ventas se asocia con la batería en la metáfora del equipo de ventas.",
+                  "hint": "Es quien marca el ritmo técnico."
+                },
+                {
+                  "id": "q4",
+                  "question": "¿Cuál es el beneficio principal de integrar Slack para la visibilidad de los tratos complejos?",
+                  "options": [
+                    "Eliminar la necesidad de licencias de Salesforce",
+                    "Permitir alertas en tiempo real y colaboración instantánea entre departamentos",
+                    "Automatizar el cierre de oportunidades",
+                    "Reducir el tamaño de la base de datos de Salesforce"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Slack permite que equipos de soporte, ingeniería y ventas colaboren sin fricciones y reciban alertas en tiempo real sobre acuerdos críticos.",
+                  "hint": "Comunicación instantánea."
+                },
+                {
+                  "id": "q5",
+                  "question": "¿En qué escenario es más crítico utilizar herramientas de colaboración en tiempo real como Slack o Quip?",
+                  "options": [
+                    "En renovaciones automáticas de bajo valor",
+                    "Cuando un trato está estancado ('stuck') o es altamente complejo",
+                    "Para tareas administrativas individuales",
+                    "Solo para el almacenamiento de archivos estáticos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La colaboración es esencial cuando un trato no avanza o requiere peritaje técnico diverso para desbloquearse.",
+                  "hint": "Tratos difíciles."
+                },
+                {
+                  "id": "q6",
+                  "question": "¿Por qué es importante el uso de 'documentos vivos' en Quip durante el ciclo de venta?",
+                  "options": [
+                    "Para que solo el administrador pueda verlos",
+                    "Para que todos los miembros del equipo tengan visibilidad del plan de cuenta actualizado",
+                    "Para reemplazar el Activity Timeline de Salesforce",
+                    "Para evitar el uso de correos electrónicos internos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La colaboración en documentos permite que roles como soporte o ingeniería vean el estado del trato sin duplicar información.",
+                  "hint": "Visibilidad compartida."
+                },
+                {
+                  "id": "q7",
+                  "question": "¿Qué rol en la 'banda' es responsable del teclado, según la analogía de colaboración?",
+                  "options": [
+                    "Ingeniero de ventas",
+                    "Representante de soporte",
+                    "Representante de marketing",
+                    "Patrocinador ejecutivo"
+                  ],
+                  "correctIndex": 2,
+                  "explanation": "El representante de marketing toca el teclado en esta metáfora de equipo.",
+                  "hint": "Armonía de mensaje."
+                },
+                {
+                  "id": "q8",
+                  "question": "¿Qué ventaja competitiva ofrece Slack a un equipo de ventas que gestiona múltiples stakeholders?",
+                  "options": [
+                    "Ocultar los errores del vendedor",
+                    "Centralizar la comunicación y evitar silos de información",
+                    "Reducir el costo del producto",
+                    "Eliminar la necesidad de reportes"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Slack centraliza la conversación, permitiendo que todos (ventas, soporte, ingeniería) estén alineados en tiempo real.",
+                  "hint": "Adiós a los silos."
+                },
+                {
+                  "id": "q9",
+                  "question": "¿Cómo ayuda la colaboración en tiempo real a reducir el ciclo de venta en acuerdos complejos?",
+                  "options": [
+                    "Automatiza la firma de contratos",
+                    "Permite resolver dudas técnicas y objeciones de inmediato involucrando a los expertos",
+                    "Reduce el número de contactos en la cuenta",
+                    "Obliga al cliente a comprar más rápido"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Involucrar a ingenieros y patrocinadores mediante Slack/Salesforce acelera la resolución de obstáculos técnicos.",
+                  "hint": "Expertos al rescate."
+                },
+                {
+                  "id": "q10",
+                  "question": "¿Qué característica define al representante de ventas dentro de la banda de colaboración?",
+                  "options": [
+                    "Tocar el bajo",
+                    "Ser la voz principal (lead vocals)",
+                    "Tocar la batería",
+                    "Ser el manager técnico"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El representante de ventas lidera el trato y por tanto es la voz principal de la banda.",
+                  "hint": "El líder del escenario."
+                },
+                {
+                  "id": "q11",
+                  "question": "¿Cuál es la función del representante de soporte en la metáfora del equipo de ventas?",
+                  "options": [
+                    "Voz principal",
+                    "Bajo",
+                    "Teclado",
+                    "Guitarra"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El soporte técnico asume el rol del bajo, proporcionando la base necesaria para la satisfacción del cliente.",
+                  "hint": "La base del ritmo."
+                },
+                {
+                  "id": "q12",
+                  "question": "¿Cómo mejora la rendición de cuentas (accountability) el uso de herramientas de colaboración integradas?",
+                  "options": [
+                    "Cada miembro sabe qué se espera de él y qué ha sido ya manejado",
+                    "Permite culpar a otros miembros más fácilmente",
+                    "Oculta quién realizó cada tarea",
+                    "Elimina las métricas de desempeño"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "La definición clara de roles y la comunicación centralizada aseguran que cada uno asuma su responsabilidad.",
+                  "hint": "Claridad de tareas."
+                },
+                {
+                  "id": "q13",
+                  "question": "¿Qué beneficio aporta involucrar a un patrocinador ejecutivo en un trato estancado?",
+                  "options": [
+                    "Realizar demostraciones técnicas profundas",
+                    "Aportar autoridad y facilitar conversaciones de alto nivel con el cliente",
+                    "Configurar el sistema Salesforce del cliente",
+                    "Sustituir al representante de ventas"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El patrocinador ejecutivo (la guitarra) ayuda a mover el trato mediante influencia y liderazgo estratégico.",
+                  "hint": "Conversaciones de C-level."
+                },
+                {
+                  "id": "q14",
+                  "question": "¿Cuál es el objetivo principal de recibir alertas de Salesforce en canales específicos de Slack?",
+                  "options": [
+                    "Aumentar el ruido digital",
+                    "Asegurar que el equipo extendido responda rápidamente a cambios en el trato",
+                    "Sustituir las llamadas telefónicas",
+                    "Eliminar el uso de Chatter"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Las alertas aseguran que todo el equipo (banda) esté al tanto de hitos importantes o cambios de estado.",
+                  "hint": "Respuesta rápida."
+                },
+                {
+                  "id": "q15",
+                  "question": "¿Qué riesgo se mitiga al usar colaboración integrada en tratos donde el rep no es experto en el producto?",
+                  "options": [
+                    "Riesgo de insolvencia",
+                    "Riesgo de proporcionar información técnica incorrecta al cliente",
+                    "Riesgo de perder el acceso a internet",
+                    "Riesgo de que el cliente no use correo electrónico"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Al colaborar con ingenieros de ventas, el rep asegura que la parte técnica sea precisa y convincente.",
+                  "hint": "Soporte experto."
+                },
+                {
+                  "id": "q16",
+                  "question": "En la colaboración de ventas moderna, ¿qué herramienta centraliza los planes de acción compartidos?",
+                  "options": [
+                    "Excel offline",
+                    "Documentos de Quip vinculados a registros de Salesforce",
+                    "Libretas de papel",
+                    "Cuentas personales de correo"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Quip permite planes de cuenta colaborativos y vivos, accesibles para todo el equipo de ventas.",
+                  "hint": "Documentos vivos."
+                },
+                {
+                  "id": "q17",
+                  "question": "¿Cómo ayuda la colaboración técnica a cerrar tratos 'fast' (rápido)?",
+                  "options": [
+                    "Reduciendo el precio automáticamente",
+                    "Resolviendo bloqueos técnicos sin esperar días por respuestas por email",
+                    "Eliminando la fase de negociación",
+                    "Ignorando los requerimientos del cliente"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La agilidad del equipo colaborativo permite atacar objeciones en tiempo real.",
+                  "hint": "Agilidad técnica."
+                },
+                {
+                  "id": "q18",
+                  "question": "¿Qué elemento es fundamental para que un 'supergroup' de ventas llegue a la cima de las listas?",
+                  "options": [
+                    "Trabajar de forma aislada",
+                    "Definir claramente responsabilidades y roles antes de empezar",
+                    "No compartir información con marketing",
+                    "Usar sistemas de datos diferentes"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Sin roles claros, el equipo genera cacofonía en lugar de éxito de ventas.",
+                  "hint": "Claridad y orden."
+                },
+                {
+                  "id": "q19",
+                  "question": "¿Qué beneficio de Salesforce ayuda a reducir la necesidad de 'manual sharing' en equipos colaborativos?",
+                  "options": [
+                    "Data Export",
+                    "Account Teams",
+                    "Duplicate Management",
+                    "Email-to-Case"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Account Teams otorga acceso automático a los miembros del equipo, eliminando la compartición manual registro por registro.",
+                  "hint": "Acceso automático."
+                },
+                {
+                  "id": "q20",
+                  "question": "Según el texto, ¿por qué los vendedores son comparados con músicos solistas?",
+                  "options": [
+                    "Porque no les gusta trabajar con otros",
+                    "Porque han dominado el arte del 'pitch' y el cierre por sí mismos",
+                    "Porque trabajan en estudios de grabación",
+                    "Porque siempre viajan solos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El texto destaca que, aunque son expertos solistas, su rendimiento mejora drásticamente con el respaldo de una 'banda'.",
+                  "hint": "Maestría individual."
+                },
+                {
+                  "id": "q21",
+                  "question": "¿Cuál es la diferencia fundamental entre Account Teams y Opportunity Teams?",
+                  "options": [
+                    "Account Teams es solo para socios externos",
+                    "Account Teams se enfoca en la relación a largo plazo; Opportunity Teams en un trato específico",
+                    "Opportunity Teams no permite definir roles",
+                    "Account Teams no otorga acceso a casos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Account Teams tiene una visión amplia (contactos, casos), mientras que Opportunity Teams se centra en cerrar un negocio puntual.",
+                  "hint": "Relación vs Trato."
+                },
+                {
+                  "id": "q22",
+                  "question": "Si el OWD de Cuentas es 'Privado', ¿qué sucede cuando das acceso a un usuario a una Oportunidad específica?",
+                  "options": [
+                    "No puede ver la cuenta",
+                    "Obtiene automáticamente acceso de solo lectura (Read-only) a la cuenta principal",
+                    "Obtiene acceso total de edición a la cuenta",
+                    "Debe solicitar acceso manual al administrador"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Salesforce otorga acceso de solo lectura a la cuenta principal para proporcionar contexto sobre la oportunidad compartida.",
+                  "hint": "Contexto mínimo necesario."
+                },
+                {
+                  "id": "q23",
+                  "question": "¿Qué nivel de acceso se recomienda configurar para los representantes de soporte en un equipo de cuenta?",
+                  "options": [
+                    "Edición de contratos y oportunidades",
+                    "Solo lectura a registros relevantes, evitando la edición de contratos",
+                    "Acceso de administrador del sistema",
+                    "Debe ser el propietario del registro"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Se debe personalizar el acceso; el soporte necesita ver los datos pero no necesariamente editar documentos legales.",
+                  "hint": "Acceso por necesidad."
+                },
+                {
+                  "id": "q24",
+                  "question": "¿Qué es un 'Default Account Team'?",
+                  "options": [
+                    "Un equipo asignado aleatoriamente por Salesforce",
+                    "Un grupo predefinido de colaboradores que un representante puede añadir rápidamente a sus cuentas",
+                    "El equipo que gestiona las cuentas de prueba",
+                    "Un equipo compuesto solo por bots de IA"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Permite a los reps configurar sus colaboradores frecuentes para no añadirlos manualmente en cada registro.",
+                  "hint": "Ahorro de tiempo."
+                },
+                {
+                  "id": "q25",
+                  "question": "¿En qué momento puede el sistema añadir automáticamente el equipo de cuenta por defecto?",
+                  "options": [
+                    "Solo al final del año fiscal",
+                    "Cuando se asigna una nueva cuenta o lead al representante de ventas",
+                    "Solo cuando el cliente hace una queja",
+                    "Cuando se borra un contacto"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El administrador puede configurar que el equipo se añada automáticamente al asignar nuevos registros al rep.",
+                  "hint": "Fase de asignación."
+                },
+                {
+                  "id": "q26",
+                  "question": "¿Qué ventaja ofrece el Reporting sobre Account Teams para un gerente de ventas?",
+                  "options": [
+                    "Oculta quién trabajó en el trato",
+                    "Determina compensaciones, crédito de cuota y fortalece el coaching",
+                    "Elimina la necesidad de usar Salesforce",
+                    "Permite ver las contraseñas de los usuarios"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Saber quién colaboró permite asignar créditos de venta correctamente y mejorar el coaching del equipo.",
+                  "hint": "Crédito y guía."
+                },
+                {
+                  "id": "q27",
+                  "question": "¿Puede un Account Team incluir a personas con diferentes niveles de acceso a oportunidades y casos?",
+                  "options": [
+                    "No, todos deben tener el mismo acceso",
+                    "Sí, es totalmente personalizable según el rol del miembro",
+                    "Solo si son administradores",
+                    "Solo si tienen la misma jerarquía de roles"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Los niveles de acceso a registros asociados (Oportunidades, Casos, Contratos) se definen por cada miembro del equipo.",
+                  "hint": "Personalización total."
+                },
+                {
+                  "id": "q28",
+                  "question": "¿Qué rol suele tener acceso a 'todo' el dato relevante en un Account Team?",
+                  "options": [
+                    "Solo el soporte técnico",
+                    "El representante de ventas principal",
+                    "Cualquier usuario con perfil de lectura",
+                    "Solo el cliente"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El representante de ventas (voz principal) debe poder tocar y editar todos los datos relevantes para cerrar el trato.",
+                  "hint": "Líder del trato."
+                },
+                {
+                  "id": "q29",
+                  "question": "¿Qué sucede con los miembros de un Opportunity Team cuando el trato se cierra?",
+                  "options": [
+                    "Se borran sus perfiles de Salesforce",
+                    "Permanecen en el equipo del registro para propósitos históricos y de reporting",
+                    "Pierden el acceso a Salesforce",
+                    "Son movidos automáticamente a un Account Team"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Los registros del equipo se mantienen para auditar quién participó en el éxito del trato.",
+                  "hint": "Historial de colaboración."
+                },
+                {
+                  "id": "q30",
+                  "question": "¿Cómo ayuda la función Account Teams a la visibilidad cuando los registros son privados?",
+                  "options": [
+                    "Elimina la privacidad de toda la org",
+                    "Permite que el propietario asigne accesos específicos sin intervención del admin",
+                    "Oculta los registros a todos excepto al CEO",
+                    "No ayuda en absoluto"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Permite que el equipo trabaje colaborativamente superando las restricciones de OWD privadas de forma controlada.",
+                  "hint": "Rompiendo silos."
+                },
+                {
+                  "id": "q31",
+                  "question": "¿Qué asegura que el 'drumbeat of success' se mantenga en un equipo colaborativo?",
+                  "options": [
+                    "No tener roles definidos",
+                    "Definir claramente responsabilidades de cada miembro",
+                    "Cambiar de equipo cada semana",
+                    "Usar solo correos externos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La claridad de responsabilidades es lo que permite que el equipo funcione armónicamente.",
+                  "hint": "Ritmo y orden."
+                },
+                {
+                  "id": "q32",
+                  "question": "¿Quién tiene el control para añadir miembros a un Account Team manualmente?",
+                  "options": [
+                    "Cualquier usuario de la empresa",
+                    "El propietario del registro (Account Owner) y administradores",
+                    "Solo el cliente externo",
+                    "Solo el equipo de marketing"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El propietario de la cuenta gestiona quién le ayuda en su 'banda' de colaboración.",
+                  "hint": "Dueño del registro."
+                },
+                {
+                  "id": "q33",
+                  "question": "En un escenario de OWD Privado, ¿qué acceso a casos obtiene un miembro de Account Team si se le asigna 'Read/Write'?",
+                  "options": [
+                    "No puede ver casos",
+                    "Puede ver y editar todos los casos asociados a esa cuenta",
+                    "Solo puede ver sus propios casos",
+                    "Debe ser el administrador de soporte"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Los Account Teams permiten granularidad; si se otorga Read/Write en casos, el miembro tiene ese permiso sobre los casos de la cuenta.",
+                  "hint": "Permiso granular."
+                },
+                {
+                  "id": "q34",
+                  "question": "¿Qué objeto de Salesforce se utiliza para definir los roles disponibles en los equipos de cuenta?",
+                  "options": [
+                    "Custom Settings",
+                    "Account Team Roles (en Setup)",
+                    "Picklists de Oportunidad",
+                    "No se pueden definir roles"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El administrador personaliza los roles de los equipos en la configuración del objeto Account Team.",
+                  "hint": "Configuración de Setup."
+                },
+                {
+                  "id": "q35",
+                  "question": "Si Lance quiere que Erin le ayude siempre en sus cuentas, ¿qué debería configurar?",
+                  "options": [
+                    "Una regla de validación",
+                    "Su 'Default Account Team' incluyendo a Erin",
+                    "Un flujo que mande emails",
+                    "Erin no puede ayudarle"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Al ponerla en su equipo por defecto, Erin aparecerá en sus registros de cuenta de forma rápida.",
+                  "hint": "Colaborador frecuente."
+                },
+                {
+                  "id": "q36",
+                  "question": "¿Qué permite que un manager posicione a las personas adecuadas en los tratos correctos?",
+                  "options": [
+                    "Intuición pura",
+                    "Análisis de reportes de desempeño de equipos de cuenta",
+                    "El azar",
+                    "El precio de los productos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Los reportes precisos sobre quién trabajó en qué acuerdos permiten al manager optimizar el equipo.",
+                  "hint": "Datos para coaching."
+                },
+                {
+                  "id": "q37",
+                  "question": "¿Es posible que un miembro de un Opportunity Team no tenga acceso a la Cuenta?",
+                  "options": [
+                    "Sí, si no se le da acceso manual",
+                    "No, siempre obtiene al menos acceso de solo lectura (Read-only) a la cuenta",
+                    "Sí, los registros están totalmente desconectados",
+                    "Solo si es un usuario externo"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Salesforce garantiza que el usuario vea el 'padre' del registro (la cuenta) para poder trabajar la oportunidad.",
+                  "hint": "Contexto automático."
+                },
+                {
+                  "id": "q38",
+                  "question": "¿Qué tipo de registros puede ver un Account Team además de la Cuenta?",
+                  "options": [
+                    "Solo Oportunidades",
+                    "Oportunidades, Contactos, Casos y Contratos asociados",
+                    "Registros de sueldos de la competencia",
+                    "Configuración del Setup"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Los equipos de cuenta están diseñados para dar una visión 360 del cliente.",
+                  "hint": "Visión integral."
+                },
+                {
+                  "id": "q39",
+                  "question": "¿Cuál es la consecuencia de no usar Account Teams en una org con cuentas privadas?",
+                  "options": [
+                    "Acceso libre para todos",
+                    "Necesidad de compartir manualmente cada registro, lo cual es ineficiente",
+                    "El sistema borra los datos",
+                    "No hay cambios en la eficiencia"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Sin Account Teams, la colaboración se vuelve lenta y dependiente de acciones manuales constantes.",
+                  "hint": "Fricción administrativa."
+                },
+                {
+                  "id": "q40",
+                  "question": "¿Qué analogía usa el texto para un equipo que define roles y trabaja unido?",
+                  "options": [
+                    "Una superbanda (supergroup)",
+                    "Un ejército",
+                    "Una familia",
+                    "Un club de lectura"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "El texto menciona que esto lleva a tu 'supergroup' al tope de los charts.",
+                  "hint": "Estrellas de la música."
+                },
+                {
+                  "id": "q41",
+                  "question": "¿Qué icono representa la función de 'Filtrar' en la To Do List?",
+                  "options": [
+                    "Unas flechas",
+                    "Un embudo (funnel)",
+                    "Una lupa",
+                    "Un engranaje"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El icono del embudo se usa para filtrar y estrechar el enfoque de las tareas.",
+                  "hint": "Estrecha el enfoque."
+                },
+                {
+                  "id": "q42",
+                  "question": "¿Qué indican las flechas arriba/abajo en la interfaz de la To Do List?",
+                  "options": [
+                    "Actualización del sistema",
+                    "La función de Ordenar (Sort)",
+                    "Prioridad alta",
+                    "Tarea completada"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Las flechas indican ordenamiento secuencial sin eliminar elementos de la vista.",
+                  "hint": "Secuencia de ítems."
+                },
+                {
+                  "id": "q43",
+                  "question": "¿Cuál de estas opciones de ordenamiento debe ser configurada por un administrador en Sales Engagement?",
+                  "options": [
+                    "Fecha de creación",
+                    "Lead Score, Opportunity Score o Custom Score",
+                    "Fecha de vencimiento",
+                    "Nombre del contacto"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Los Scores son métricas avanzadas que requieren configuración administrativa previa en Sales Engagement.",
+                  "hint": "Configuración de administrador."
+                },
+                {
+                  "id": "q44",
+                  "question": "¿Qué color identifica el icono de Cadencias dentro de la To Do List?",
+                  "options": [
+                    "Rojo",
+                    "Verde",
+                    "Azul",
+                    "Naranja"
+                  ],
+                  "correctIndex": 2,
+                  "explanation": "El icono de cadencia en la To Do List es azul.",
+                  "hint": "Color de confianza."
+                },
+                {
+                  "id": "q45",
+                  "question": "¿Qué se visualiza al expandir una tarjeta de tarea en la To Do List?",
+                  "options": [
+                    "La biografía del cliente",
+                    "El paso de la cadencia y el nombre de la cadencia asociada",
+                    "Un gráfico de ventas",
+                    "El historial de navegación"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La tarjeta expandida muestra detalles contextuales críticos para el vendedor.",
+                  "hint": "Detalle del paso."
+                },
+                {
+                  "id": "q46",
+                  "question": "¿Qué acción rápida permite la To Do List directamente desde el checkbox de la tarjeta?",
+                  "options": [
+                    "Borrar el registro",
+                    "Marcar la tarea como completada",
+                    "Asignarla a otro usuario",
+                    "Posponerla un año"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Se puede marcar como completada con un solo clic, lo cual es descrito como 'satisfactorio'.",
+                  "hint": "Check de completado."
+                },
+                {
+                  "id": "q47",
+                  "question": "¿Qué sucede al filtrar por 'Cuenta' (Account) en la To Do List?",
+                  "options": [
+                    "Solo muestra la cuenta principal",
+                    "Muestra todos los ítems relacionados con esa cuenta y sus contactos asociados",
+                    "Borra las tareas de los contactos",
+                    "Muestra facturas pendientes"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Este filtro agrupa inteligentemente todo el trabajo relacionado con una jerarquía de cuenta.",
+                  "hint": "Agrupación inteligente."
+                },
+                {
+                  "id": "q48",
+                  "question": "¿Qué icono permite realizar búsquedas por términos específicos?",
+                  "options": [
+                    "Embudo",
+                    "Lupa (Search icon)",
+                    "Flechas",
+                    "Estrella"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La lupa abre el campo de búsqueda para encontrar tareas rápidamente.",
+                  "hint": "Buscador universal."
+                },
+                {
+                  "id": "q49",
+                  "question": "¿Cuál es la ventaja de ordenar por 'Opportunity Score'?",
+                  "options": [
+                    "Ver los tratos más probables de ganar al principio de la lista",
+                    "Ocultar las oportunidades pequeñas",
+                    "Cambiar el propietario del registro",
+                    "Eliminar tareas antiguas"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Permite priorizar el tiempo en las tareas que impactan los negocios con mayor puntuación de IA.",
+                  "hint": "Prioridad basada en éxito."
+                },
+                {
+                  "id": "q50",
+                  "question": "¿Qué opciones de dirección ofrece la función de ordenar?",
+                  "options": [
+                    "Izquierda y Derecha",
+                    "Ascendente y Descendente",
+                    "Cerca y Lejos",
+                    "Solo hay una dirección fija"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El usuario elige ver lo más reciente/alto o antiguo/bajo primero.",
+                  "hint": "Flujo de la lista."
+                },
+                {
+                  "id": "q51",
+                  "question": "¿Quién decide qué Scores son métricas importantes para la organización?",
+                  "options": [
+                    "El cliente",
+                    "Los Managers (Gerentes)",
+                    "El soporte de Microsoft",
+                    "Cualquier usuario de ventas"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Los gerentes deciden las métricas y el administrador las configura en Sales Engagement.",
+                  "hint": "Decisión de negocio."
+                },
+                {
+                  "id": "q52",
+                  "question": "¿Qué tipos de ítems de trabajo centraliza la To Do List?",
+                  "options": [
+                    "Solo correos personales",
+                    "Tareas, Cadencias e ítems de trabajo (Work Items)",
+                    "Publicaciones de Facebook",
+                    "Fotos de la galería"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Es el gestor central para todo el flujo de trabajo del representante de ventas.",
+                  "hint": "Centro de comando."
+                },
+                {
+                  "id": "q53",
+                  "question": "¿Qué permite el filtro 'Action Type'?",
+                  "options": [
+                    "Cambiar el color de la pantalla",
+                    "Ver tareas específicas de llamadas, correos, LinkedIn o Screen Flows",
+                    "Borrar todas las llamadas",
+                    "Pedir permiso al jefe"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Permite enfocarse en un tipo de actividad específica (ej. hacer todas las llamadas del día juntas).",
+                  "hint": "Filtro por actividad."
+                },
+                {
+                  "id": "q54",
+                  "question": "¿Qué funcionalidad permite personalizar la organización visual de las tareas?",
+                  "options": [
+                    "Uso de etiquetas (Labels) y colores",
+                    "No se puede personalizar",
+                    "Cambiando el código fuente",
+                    "Borrando las tareas difíciles"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Los usuarios pueden usar etiquetas para categorizar sus tareas a su gusto.",
+                  "hint": "Organización visual."
+                },
+                {
+                  "id": "q55",
+                  "question": "¿Cómo se identifican visualmente las tareas de cadencia en la navegación?",
+                  "options": [
+                    "Por un icono de exclamación",
+                    "Por el icono azul de cadencia",
+                    "Por una foto del cliente",
+                    "No tienen icono"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El icono azul es la firma visual de Sales Engagement dentro de la To Do List.",
+                  "hint": "Icono distintivo."
+                },
+                {
+                  "id": "q56",
+                  "question": "¿Qué indica el filtro 'Cadence Step Status'?",
+                  "options": [
+                    "Si el paso ha iniciado, no ha iniciado o está en espera",
+                    "El nombre del creador",
+                    "El precio de la cadencia",
+                    "La ubicación geográfica"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Ayuda a gestionar el avance de los prospectos a través del proceso definido.",
+                  "hint": "Estado del flujo."
+                },
+                {
+                  "id": "q57",
+                  "question": "¿Qué sucede cuando el sistema sugiere matches mientras escribes en búsqueda?",
+                  "options": [
+                    "Se cierra la aplicación",
+                    "Muestra sugerencias de contactos, leads o etiquetas que coinciden",
+                    "Borra lo que escribiste",
+                    "Manda un email a esos contactos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Facilita encontrar registros rápidamente sin escribir el nombre completo.",
+                  "hint": "Autocompletado inteligente."
+                },
+                {
+                  "id": "q58",
+                  "question": "¿Qué icono en la To Do List parece un embudo?",
+                  "options": [
+                    "Sort",
+                    "Filter",
+                    "Search",
+                    "Refresh"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La documentación asocia el embudo (funnel) con el filtrado por ser intuitivo.",
+                  "hint": "Herramienta de filtrado."
+                },
+                {
+                  "id": "q59",
+                  "question": "¿Qué se puede hacer en el panel derecho al seleccionar una cadencia específica?",
+                  "options": [
+                    "Cambiar el logo de la empresa",
+                    "Ver todos los pasos que están vencidos o por vencer para esa cadencia",
+                    "Eliminar al cliente",
+                    "Ver noticias de la industria"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Centraliza el trabajo pendiente de esa estrategia de venta particular.",
+                  "hint": "Trabajo por cadencia."
+                },
+                {
+                  "id": "q60",
+                  "question": "¿Es posible filtrar tareas por 'Prioridad' o 'Estado'?",
+                  "options": [
+                    "No, solo por fecha",
+                    "Sí, son opciones estándar en el menú de filtros",
+                    "Solo para administradores",
+                    "Solo en la versión clásica"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La To Do List permite enfocarse en tareas según su urgencia (Priority) o fase (Status).",
+                  "hint": "Gestión de urgencia."
+                },
+                {
+                  "id": "q61",
+                  "question": "¿Cómo puede un representante de ventas crear un calendario para rastrear hitos como las 'Close Dates'?",
+                  "options": [
+                    "Pidiendo permiso al soporte técnico",
+                    "Creando un 'Object Calendar' basado en el objeto Oportunidad y el campo Close Date",
+                    "No es posible crear calendarios de objetos",
+                    "Exportando a un calendario de papel"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Salesforce permite crear calendarios a partir de cualquier objeto con campos de fecha.",
+                  "hint": "Hitos de cierre."
+                },
+                {
+                  "id": "q62",
+                  "question": "¿Qué vista permite gestionar eventos como si fueran una lista, mostrando pasado y futuro en tabla?",
+                  "options": [
+                    "Vista Mensual",
+                    "Vista de Tabla (Table View)",
+                    "Vista de Kanban",
+                    "Vista de Disponibilidad"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Haciendo clic en el icono de engranaje del calendario se puede elegir 'Table' para ver los eventos en formato lista.",
+                  "hint": "Formato de lista."
+                },
+                {
+                  "id": "q63",
+                  "question": "¿Qué es un 'Resource Calendar' en Salesforce?",
+                  "options": [
+                    "Un calendario de vacaciones",
+                    "Un calendario para activos compartidos como un 'Demonstration Truck'",
+                    "Una lista de precios",
+                    "Un repositorio de archivos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Se usa para coordinar recursos físicos y evitar conflictos de agenda.",
+                  "hint": "Activos físicos."
+                },
+                {
+                  "id": "q64",
+                  "question": "¿Qué vista se utiliza para comparar agendas de varios miembros del equipo en columnas?",
+                  "options": [
+                    "Vista Semanal",
+                    "Availability View (Vista de disponibilidad)",
+                    "Vista de Tabla",
+                    "Vista del día"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La vista de disponibilidad facilita encontrar huecos comunes entre los miembros del equipo.",
+                  "hint": "Comparación visual."
+                },
+                {
+                  "id": "q65",
+                  "question": "¿Qué ajuste de Setup debe marcar el administrador para que los reps puedan añadir listas de usuarios a sus calendarios?",
+                  "options": [
+                    "Enable Shared Activities",
+                    "Add user lists to calendar views in Lightning Experience",
+                    "Enable Calendar Sync",
+                    "Turn on Cloud Scheduler"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Este checkbox en 'Activity Settings' es mandatorio para habilitar la funcionalidad de listas de usuarios en calendarios.",
+                  "hint": "Permiso para ver grupos."
+                },
+                {
+                  "id": "q66",
+                  "question": "Maria creó una Global Action llamada 'Quick Meet'. ¿Cuál es su propósito?",
+                  "options": [
+                    "Hacer videollamadas",
+                    "Permitir que los reps creen eventos rápidamente desde cualquier lugar con valores predefinidos",
+                    "Comprar comida para la oficina",
+                    "Eliminar eventos antiguos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Las Global Actions facilitan la creación rápida de registros como eventos sin salir de la pantalla actual.",
+                  "hint": "Acción rápida."
+                },
+                {
+                  "id": "q67",
+                  "question": "¿Qué permiso se requiere en un calendario de recursos para que un rep pueda 'reservar' el camión?",
+                  "options": [
+                    "Show Details",
+                    "Show Details and Add Events",
+                    "Hide Details",
+                    "Solo Lectura"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Para agendar un recurso, el usuario necesita el permiso para añadir eventos a dicho calendario público/recurso.",
+                  "hint": "Permiso de escritura."
+                },
+                {
+                  "id": "q68",
+                  "question": "¿Para qué sirve un 'Public Calendar' según el caso de Lincoln?",
+                  "options": [
+                    "Para publicar citas en redes sociales",
+                    "Para gestionar eventos grupales como seminarios y exposiciones (Expos & Seminars)",
+                    "Para ver el calendario del CEO",
+                    "Para ocultar tareas"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Los calendarios públicos sirven para que todo el equipo esté alineado sobre hitos comunes del grupo.",
+                  "hint": "Eventos de equipo."
+                },
+                {
+                  "id": "q69",
+                  "question": "¿Qué objeto se seleccionó como 'Target Object' para la acción Quick Meet?",
+                  "options": [
+                    "Task",
+                    "Event",
+                    "Opportunity",
+                    "Account"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Al tratarse de agendar reuniones, el objeto destino debe ser el Evento.",
+                  "hint": "Registros de tiempo."
+                },
+                {
+                  "id": "q70",
+                  "question": "¿Qué valor predefinido configuró Maria para el campo 'Subject' en Quick Meet?",
+                  "options": [
+                    "Call",
+                    "Meeting",
+                    "Follow-up",
+                    "Vacio"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Se utilizó la fórmula \"Meeting\" (con comillas) para que el campo se llene solo.",
+                  "hint": "Nombre de la cita."
+                },
+                {
+                  "id": "q71",
+                  "question": "¿Dónde se accede al App Launcher para buscar el calendario?",
+                  "options": [
+                    "Icono de engranaje",
+                    "Icono de rejilla de 9 puntos",
+                    "Foto de perfil",
+                    "Barra de búsqueda global"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El App Launcher (rejilla) permite encontrar todas las apps de Salesforce.",
+                  "hint": "Waffle icon."
+                },
+                {
+                  "id": "q72",
+                  "question": "¿Qué permite hacer el filtro 'Apply a Filter' al crear un Object Calendar?",
+                  "options": [
+                    "Borrar registros",
+                    "Limitar qué registros aparecen basándose en una List View existente",
+                    "Cambiar el color del calendario",
+                    "No hace nada"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El calendario solo mostrará los registros que cumplan los criterios de la vista de lista seleccionada.",
+                  "hint": "Filtrado por vista."
+                },
+                {
+                  "id": "q73",
+                  "question": "¿Qué sucede con los eventos de un 'Resource Calendar' si se desactiva el checkbox 'Active'?",
+                  "options": [
+                    "Se borran permanentemente",
+                    "Dejan de estar disponibles para ser visualizados o reservados",
+                    "Cambian de color",
+                    "Se pasan al calendario personal del admin"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El recurso debe estar activo para que el equipo pueda utilizarlo.",
+                  "hint": "Estado del recurso."
+                },
+                {
+                  "id": "q74",
+                  "question": "¿Qué campo es obligatorio definir para saber dónde colocar el ítem en un calendario de objeto?",
+                  "options": [
+                    "Field for Start",
+                    "Description",
+                    "Location",
+                    "Nombre del cliente"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Sin un campo de fecha/hora de inicio, Salesforce no sabe en qué día poner el evento.",
+                  "hint": "El 'cuándo' inicia."
+                },
+                {
+                  "id": "q75",
+                  "question": "¿Qué beneficio ofrece usar 'User Lists' en el calendario de un asistente administrativo como Howard?",
+                  "options": [
+                    "Poder ver y comparar múltiples agendas de vendedores a la vez rápidamente",
+                    "Borrar los correos de los vendedores",
+                    "Cambiar las cuotas de ventas",
+                    "Solo ver su propio calendario"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Facilita agendar reuniones grupales al tener a todo el equipo visible con un clic.",
+                  "hint": "Agilidad grupal."
+                },
+                {
+                  "id": "q76",
+                  "question": "¿Qué icono representa el 'Setup' en la interfaz de Salesforce?",
+                  "options": [
+                    "Una estrella",
+                    "Un engranaje",
+                    "Una campana",
+                    "Un signo de pregunta"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El engranaje abre las opciones de configuración administrativa.",
+                  "hint": "Ajustes del sistema."
+                },
+                {
+                  "id": "q77",
+                  "question": "¿Qué permite la funcionalidad 'Auto-relate Attendees'?",
+                  "options": [
+                    "Enviar spam",
+                    "Relacionar automáticamente el asistente al campo 'Name' si existe su registro de contacto",
+                    "Crear facturas",
+                    "Grabar la llamada"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Si Shared Activities está activo, Salesforce facilita la vinculación de personas a eventos.",
+                  "hint": "Vínculo automático."
+                },
+                {
+                  "id": "q78",
+                  "question": "¿Cuál es una limitación al usar calendarios de objetos?",
+                  "options": [
+                    "Solo pueden basarse en Oportunidades",
+                    "Dependen de una Vista de Lista existente para filtrar los datos",
+                    "No permiten cambiar de color",
+                    "No se pueden compartir"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Para que el calendario funcione, debe haber una list view que sirva de fuente de datos filtrada.",
+                  "hint": "Fuente de datos."
+                },
+                {
+                  "id": "q79",
+                  "question": "¿Dónde se gestiona quién puede ver un calendario público?",
+                  "options": [
+                    "En el perfil del usuario",
+                    "En el botón 'Sharing' de la configuración del calendario público",
+                    "En la página de inicio",
+                    "En la cuenta del cliente"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El administrador debe añadir grupos o roles a la configuración de 'Sharing' del calendario.",
+                  "hint": "Permisos de acceso."
+                },
+                {
+                  "id": "q80",
+                  "question": "¿Qué sucede con los eventos pasados en el widget 'Today's Events' de la Home page?",
+                  "options": [
+                    "Se ponen en rojo",
+                    "Desaparecen de la vista (drop off)",
+                    "Se borran de la base de datos",
+                    "Se duplican"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Para mantener el foco, Salesforce solo muestra los próximos eventos del día.",
+                  "hint": "Foco en el presente."
+                },
+                {
+                  "id": "q81",
+                  "question": "¿Qué función debe habilitar el administrador para relacionar una sola tarea con hasta 50 contactos?",
+                  "options": [
+                    "Activity Timeline",
+                    "Shared Activities (Permitir relacionar múltiples contactos)",
+                    "Enhanced Email",
+                    "Contacts to Multiple Accounts"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Shared Activities permite expandir la relación de una actividad de un solo contacto a cincuenta.",
+                  "hint": "Configuración de actividades."
+                },
+                {
+                  "id": "q82",
+                  "question": "En organizaciones con grandes volúmenes de datos, ¿cuánto tiempo puede tardar en habilitarse Shared Activities?",
+                  "options": [
+                    "Es instantáneo siempre",
+                    "Hasta 48 horas",
+                    "Una semana",
+                    "Requiere reiniciar Salesforce"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "En el peor de los casos, el proceso en segundo plano puede tomar dos días.",
+                  "hint": "Dos días."
+                },
+                {
+                  "id": "q83",
+                  "question": "¿Qué sucede si el representante elimina al contacto designado como 'Primary' en una actividad compartida?",
+                  "options": [
+                    "Se borra la actividad",
+                    "El siguiente contacto en la lista relacionada se convierte automáticamente en el nuevo 'Primary'",
+                    "La tarea queda sin contacto",
+                    "Se bloquea el registro"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Salesforce garantiza que siempre haya un contacto principal promoviendo al siguiente en la lista.",
+                  "hint": "Promoción automática."
+                },
+                {
+                  "id": "q84",
+                  "question": "¿Cómo se almacenan los correos de 'Web-to-Lead' incluso con Enhanced Email activado?",
+                  "options": [
+                    "Como registros EmailMessage",
+                    "Como registros de Tarea (Task)",
+                    "No se almacenan",
+                    "Como archivos adjuntos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Ciertos correos automatizados como Web-to-Lead o sincronizaciones de Outlook se guardan únicamente como tareas.",
+                  "hint": "Excepción de almacenamiento."
+                },
+                {
+                  "id": "q85",
+                  "question": "¿Cuál es una limitación técnica del objeto EmailMessage?",
+                  "options": [
+                    "No permite campos de texto",
+                    "No admite campos de moneda (Currency)",
+                    "No admite triggers",
+                    "Solo puede tener 2 campos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La documentación especifica que los campos de tipo moneda no son compatibles con EmailMessage.",
+                  "hint": "Limitación de tipo de dato."
+                },
+                {
+                  "id": "q86",
+                  "question": "¿Qué beneficio ofrece conectar Salesforce con Gmail u Office 365?",
+                  "options": [
+                    "Aumenta el almacenamiento de Salesforce",
+                    "Reduce el 'context switching' al enviar correos desde Salesforce usando el servidor externo",
+                    "Permite hackear cuentas",
+                    "Elimina la necesidad de internet"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Evita que los reps tengan que saltar entre aplicaciones constantemente.",
+                  "hint": "Eficiencia de flujo."
+                },
+                {
+                  "id": "q87",
+                  "question": "¿Quién gestiona el cumplimiento (compliance) y la entregabilidad cuando se usa email externo?",
+                  "options": [
+                    "Salesforce",
+                    "El proveedor externo (Google o Microsoft)",
+                    "El administrador de la red",
+                    "Nadie"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Al usar sus servidores, el proveedor externo es el responsable de las normativas de entrega.",
+                  "hint": "Motor de envío externo."
+                },
+                {
+                  "id": "q88",
+                  "question": "¿Qué registro aparece en la página de detalles del correo con Enhanced Email?",
+                  "options": [
+                    "Task",
+                    "EmailMessage",
+                    "Event",
+                    "Account"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Enhanced Email utiliza el objeto EmailMessage para mostrar el contenido rico del correo.",
+                  "hint": "Objeto de mensaje rico."
+                },
+                {
+                  "id": "q89",
+                  "question": "¿Dónde puede un rep personalizar su firma y nombre de remitente?",
+                  "options": [
+                    "En el Setup de la org",
+                    "En 'My Email Settings' dentro de sus ajustes personales",
+                    "En el muro de Chatter",
+                    "No se puede personalizar"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Cada usuario controla su identidad de correo desde su configuración personal.",
+                  "hint": "Ajustes del usuario."
+                },
+                {
+                  "id": "q90",
+                  "question": "¿Está soportado el 'Bounce Management' cuando se envía a través de cuentas externas?",
+                  "options": [
+                    "Sí",
+                    "No está soportado",
+                    "Solo para Gmail",
+                    "Solo para administradores"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Salesforce no puede rastrear rebotes de servidores que no controla.",
+                  "hint": "Seguimiento limitado."
+                },
+                {
+                  "id": "q91",
+                  "question": "¿Qué sucede con los correos de flujos de trabajo (Workflows) cuando se usa email externo?",
+                  "options": [
+                    "Se envían vía Gmail",
+                    "Siguen enviándose a través de Salesforce",
+                    "Se bloquean",
+                    "Se borran"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Las automatizaciones del sistema operan internamente en Salesforce por seguridad y control.",
+                  "hint": "Reglas de sistema."
+                },
+                {
+                  "id": "q92",
+                  "question": "¿Qué lista relacionada debe confirmar el admin para usar Shared Activities?",
+                  "options": [
+                    "Files",
+                    "Name (Nombre)",
+                    "Notes",
+                    "Partners"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La lista 'Name' es la que permite gestionar los múltiples contactos vinculados.",
+                  "hint": "Gestión de participantes."
+                },
+                {
+                  "id": "q93",
+                  "question": "¿Cuál es el límite de caracteres para la firma de correo en Salesforce?",
+                  "options": [
+                    "500",
+                    "1333",
+                    "5000",
+                    "Ilimitado"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El sistema permite hasta 1333 caracteres en el campo de firma personal.",
+                  "hint": "Mil trescientos..."
+                },
+                {
+                  "id": "q94",
+                  "question": "¿Qué sucede si una empresa ya usa 'Email-to-Case'?",
+                  "options": [
+                    "No puede usar Enhanced Email",
+                    "Ya tiene acceso a funciones de Enhanced Email sin habilitarlo explícitamente",
+                    "Se borran sus casos",
+                    "Debe deshabilitarlo"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Email-to-Case utiliza la misma infraestructura rica de datos para los correos.",
+                  "hint": "Excepción de habilitación."
+                },
+                {
+                  "id": "q95",
+                  "question": "¿Cómo se obtienen los registros (logs) de envío si se usa un servicio externo?",
+                  "options": [
+                    "En los Email Logs de Salesforce",
+                    "Directamente desde el proveedor (Gmail u Office 365)",
+                    "No existen logs",
+                    "En el reporte de actividades"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "La información de log de los servidores externos no está disponible en Salesforce.",
+                  "hint": "Fuente externa."
+                },
+                {
+                  "id": "q96",
+                  "question": "¿Pueden los representantes trabajar en Salesforce mientras se habilita Shared Activities?",
+                  "options": [
+                    "No, se bloquea la org",
+                    "Sí, pueden continuar trabajando normalmente",
+                    "Solo en modo lectura",
+                    "Solo si son admins"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El proceso ocurre en segundo plano sin interrumpir la operación.",
+                  "hint": "Sin inactividad."
+                },
+                {
+                  "id": "q97",
+                  "question": "¿Qué limitación tiene un Workflow Rule sobre el objeto EmailMessage?",
+                  "options": [
+                    "Solo puede borrar el email",
+                    "Solo puede actualizar campos en registros de Casos (Cases) relacionados",
+                    "No permite actualizaciones",
+                    "Puede borrar la cuenta"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Las reglas sobre EmailMessage están restringidas a cambios en el objeto Caso.",
+                  "hint": "Foco en soporte."
+                },
+                {
+                  "id": "q98",
+                  "question": "¿Qué componente muestra llamadas, correos y tareas en orden cronológico?",
+                  "options": [
+                    "Activity Timeline",
+                    "Chatter",
+                    "Details",
+                    "Kanban"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "La línea de tiempo de actividades es el centro histórico del registro.",
+                  "hint": "Muro histórico."
+                },
+                {
+                  "id": "q99",
+                  "question": "¿Qué advierte un triángulo amarillo en la vista Kanban de Oportunidades?",
+                  "options": [
+                    "Que el precio es muy bajo",
+                    "Que no hay actividades programadas (tareas o reuniones)",
+                    "Que el cliente es VIP",
+                    "Error de sistema"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Es una advertencia visual para que el rep actúe y mantenga el trato vivo.",
+                  "hint": "Advertencia de inactividad."
+                },
+                {
+                  "id": "q100",
+                  "question": "¿Cuántas tareas y eventos muestra el widget de la Home page por defecto?",
+                  "options": [
+                    "Todos los del mes",
+                    "Los próximos 5 eventos y próximas 5 tareas",
+                    "Solo el más urgente",
+                    "Hasta 50 elementos"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Las secciones Today's Events y Today's Tasks muestran los 5 ítems inmediatos.",
+                  "hint": "Lista rápida."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
