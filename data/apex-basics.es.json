@@ -1,0 +1,1339 @@
+{
+  "appVersion": "1.0",
+  "lastUpdated": "2026-02-18",
+  "products": [
+    {
+      "id": "salesforce-platform",
+      "title": "Plataforma Salesforce",
+      "description": "Temas base de desarrollo sobre la plataforma.",
+      "concepts": [
+        {
+          "id": "apex",
+          "title": "Apex",
+          "description": "Fundamentos de Apex.",
+          "quizzes": [
+            {
+              "id": "apex-basics",
+              "title": "Fundamentos de Apex",
+              "description": "Pon a prueba tus fundamentos de programacion Apex en Salesforce.",
+              "difficulty": "Intermedio",
+              "certification": "Platform Developer I",
+              "trailheadLinks": [
+                {
+                  "title": "Base de datos Apex",
+                  "url": "https://trailhead.salesforce.com/content/learn/modules/apex_database"
+                },
+                {
+                  "title": "Apex Basics y .NET",
+                  "url": "https://trailhead.salesforce.com/content/learn/modules/apex_basics_dotnet"
+                }
+              ],
+              "questions": [
+                {
+                  "id": "q1",
+                  "question": "En un trigger de Contact con muchos registros, que patron evita limites de SOQL?",
+                  "options": [
+                    "Recolectar Ids en un Set y consultar una sola vez fuera del bucle.",
+                    "Hacer una consulta dentro de cada iteracion del for.",
+                    "Usar SOSL por cada registro para traer un solo contacto.",
+                    "Llamar countQuery por cada registro antes de actualizar."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Una sola consulta bulk reduce el numero de queries y escala con lotes grandes.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q2",
+                  "question": "Quieres actualizar 300 Leads en un trigger. Cual es la mejor estrategia de DML?",
+                  "options": [
+                    "Llamar update por cada Lead dentro del bucle.",
+                    "Hacer un upsert por cada Lead y luego un update final.",
+                    "Modificar en memoria y ejecutar un solo update sobre la lista.",
+                    "Usar Database.setSavepoint para cada Lead antes del update."
+                  ],
+                  "correctIndex": 2,
+                  "explanation": "Acumular cambios y ejecutar un solo DML evita alcanzar el limite de sentencias.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q3",
+                  "question": "En un trigger before insert de Account, como asignas un valor por defecto a un campo?",
+                  "options": [
+                    "Llamar update sobre Trigger.new antes de guardar.",
+                    "Asignar el valor directamente en los registros de Trigger.new.",
+                    "Usar undelete para forzar la persistencia del cambio.",
+                    "Crear una cola Queueable para aplicar el valor luego."
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "En before trigger los cambios en Trigger.new se guardan sin DML explicito.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q4",
+                  "question": "Necesitas insertar una lista donde algunos registros pueden fallar pero los demas deben guardarse. Que usas?",
+                  "options": [
+                    "insert lista;",
+                    "Database.insert(lista, false);",
+                    "merge lista;",
+                    "upsert lista con allOrNone implicito true;"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Database.insert con allOrNone=false permite exitos parciales y devuelve SaveResult por registro.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q5",
+                  "question": "Cual es el limite de consultas SOQL en una transaccion Apex sincrona?",
+                  "options": [
+                    "50",
+                    "100",
+                    "150",
+                    "200"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El limite sincronico es 100 consultas SOQL por transaccion.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q6",
+                  "question": "Tienes una lista de Opportunity y necesitas acceder rapido al Account relacionado por Id. Que estructura ayuda mas?",
+                  "options": [
+                    "List<Account>",
+                    "Set<Account>",
+                    "Map<Id, Account>",
+                    "Queue<Account>"
+                  ],
+                  "correctIndex": 2,
+                  "explanation": "Map por Id ofrece busqueda O(1) y simplifica joins en memoria.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q7",
+                  "question": "Que describe mejor una variable static en Apex?",
+                  "options": [
+                    "Se comparte entre metodos de la clase durante la transaccion.",
+                    "Se persiste entre transacciones automaticamente.",
+                    "Solo existe dentro de un constructor.",
+                    "Siempre se serializa a la base de datos."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Static vive a nivel de clase en la transaccion actual, no entre transacciones.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q8",
+                  "question": "Que modificador limita un metodo para uso solo dentro de su propia clase?",
+                  "options": [
+                    "public",
+                    "global",
+                    "protected",
+                    "private"
+                  ],
+                  "correctIndex": 3,
+                  "explanation": "private restringe el acceso al interior de la clase.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q9",
+                  "question": "Quieres permitir que una subclase cambie el comportamiento de un metodo base. Que requiere el metodo base?",
+                  "options": [
+                    "static",
+                    "virtual",
+                    "testMethod",
+                    "transient"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Un metodo virtual en la clase base puede redefinirse con override en la subclase.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q10",
+                  "question": "Cual es la principal ventaja de usar una interfaz en Apex?",
+                  "options": [
+                    "Define contratos de metodos para implementaciones multiples.",
+                    "Permite almacenar datos en cache automaticamente.",
+                    "Evita por completo los governor limits.",
+                    "Reemplaza todos los triggers de un objeto."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Las interfaces fuerzan firmas consistentes y habilitan polimorfismo.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q11",
+                  "question": "Necesitas validar texto vacio, null o con espacios. Que metodo es mas seguro?",
+                  "options": [
+                    "String.isBlank(valor)",
+                    "valor.length() == 0",
+                    "valor == ''",
+                    "valor.trim() == null"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "String.isBlank cubre null, cadena vacia y solo espacios en una sola llamada.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q12",
+                  "question": "Que afirmacion sobre Datetime en Apex es correcta?",
+                  "options": [
+                    "Se guarda en UTC y se muestra segun la zona del usuario.",
+                    "Siempre ignora zonas horarias y locale.",
+                    "Solo puede contener fecha sin hora.",
+                    "No se puede comparar con otro Datetime."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Salesforce almacena Datetime en UTC y adapta visualizacion por usuario.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q13",
+                  "question": "Que efecto tiene declarar una clase con 'with sharing'?",
+                  "options": [
+                    "Aplica reglas de comparticion del usuario actual.",
+                    "Omite todas las validaciones de seguridad.",
+                    "Aumenta automaticamente el limite de CPU.",
+                    "Impide ejecutar SOQL en la clase."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "with sharing respeta el modelo de acceso por registros.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q14",
+                  "question": "Como modelas un error de negocio reutilizable en Apex?",
+                  "options": [
+                    "Crear una clase que extienda Exception.",
+                    "Usar System.debug como excepcion.",
+                    "Cambiar el tipo de retorno a Boolean.",
+                    "Usar solamente addError en todas las capas."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Extender Exception permite lanzar y capturar errores de dominio con claridad.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q15",
+                  "question": "Para estados finitos como Draft, Approved y Rejected, que tipo mejora legibilidad y control?",
+                  "options": [
+                    "Enum",
+                    "Map<String, Object>",
+                    "Blob",
+                    "Object"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Enum limita valores posibles y evita errores tipograficos en literales.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q16",
+                  "question": "Tienes una clase utilitaria sin estado. Como deberian declararse sus metodos de ayuda?",
+                  "options": [
+                    "Como static para invocarlos sin instancia.",
+                    "Como virtual para obligar herencia.",
+                    "Como global para cualquier org externa.",
+                    "Como transient para evitar heap."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Metodos static en utilidades simplifican uso y evitan crear objetos innecesarios.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q17",
+                  "question": "Necesitas iterar una consulta muy grande en Apex sin cargar todo en memoria. Que sintaxis usar?",
+                  "options": [
+                    "for (SObject r : [SELECT ...])",
+                    "while(true) con consultas OFFSET",
+                    "SOSL repetido con LIMIT 1",
+                    "Map.values() sin consulta"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "El query for loop recupera registros en lotes internos y reduce riesgo de heap.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q18",
+                  "question": "Si una consulta puede no devolver filas, que patron evita QueryException?",
+                  "options": [
+                    "Asignar el resultado a una lista y validar isEmpty.",
+                    "Asignarlo directo a un solo sObject siempre.",
+                    "Envolver el SELECT en try sin catch.",
+                    "Forzar LIMIT 1 y asumir que existe."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Consultar a lista evita excepcion cuando no hay registros y permite manejo explicito.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q19",
+                  "question": "Como traes Accounts junto con sus Contacts en una sola consulta?",
+                  "options": [
+                    "Con subconsulta hijo dentro del SELECT padre.",
+                    "Con SOSL y luego merge manual obligatorio.",
+                    "Con UPDATE ... RETURNING",
+                    "No es posible en SOQL."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "La relacion padre-hijo en SOQL usa una subconsulta sobre el nombre de relacion.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q20",
+                  "question": "Como accedes desde Contact al nombre de su Account en SOQL?",
+                  "options": [
+                    "Con notacion punto: Account.Name",
+                    "Con subconsulta SELECT (SELECT Name FROM Account)",
+                    "Solo via SOSL, no via SOQL",
+                    "Con DML update previo"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "La relacion hijo-padre usa notacion punto hacia el campo de referencia.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q21",
+                  "question": "Debes buscar una palabra en Name, Email y Phone a traves de varios objetos. Que tecnologia encaja mejor?",
+                  "options": [
+                    "SOSL",
+                    "SOQL con GROUP BY",
+                    "DML upsert",
+                    "Platform Cache"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "SOSL esta optimizado para busqueda de texto en multiples campos y objetos.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q22",
+                  "question": "Quieres contar oportunidades por Account en una sola consulta. Que debes usar?",
+                  "options": [
+                    "Consulta agregada con COUNT() y GROUP BY AccountId.",
+                    "Una consulta por cada Account en un for.",
+                    "SOSL con RETURNING Opportunity",
+                    "Database.delete para limpiar duplicados"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Las funciones agregadas permiten resumir datos sin consultas repetidas.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q23",
+                  "question": "Como filtras por un valor Apex variable en SOQL estatico?",
+                  "options": [
+                    "Usando variable bind con prefijo ':'",
+                    "Concatenando texto en el WHERE de consulta estatica",
+                    "Usando JSON.deserialize en el filtro",
+                    "No se puede, solo con SOSL"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "El bind variable permite pasar valores seguros y evita inyeccion.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q24",
+                  "question": "Que filtro suele ser mas selectivo para una consulta grande?",
+                  "options": [
+                    "Campo indexado como Id o External Id con condicion exacta.",
+                    "LIKE '%texto%' sobre un campo largo sin indice.",
+                    "Sin filtro, trayendo todos los registros.",
+                    "ORDER BY sin WHERE"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Filtros indexados y exactos reducen cardinalidad y mejoran selectividad.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q25",
+                  "question": "Quieres los Cases mas recientes primero. Que clausula usas?",
+                  "options": [
+                    "ORDER BY CreatedDate DESC",
+                    "GROUP BY CreatedDate DESC",
+                    "HAVING CreatedDate DESC",
+                    "FOR UPDATE DESC"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "ORDER BY con DESC ordena de mas nuevo a mas antiguo.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q26",
+                  "question": "Necesitas solo los 10 registros mas recientes. Cual combinacion es correcta?",
+                  "options": [
+                    "ORDER BY CreatedDate DESC con LIMIT 10",
+                    "GROUP BY Id con LIMIT 10",
+                    "OFFSET 10 sin ORDER BY",
+                    "HAVING COUNT() > 10"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "ORDER BY define prioridad y LIMIT recorta el resultado final.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q27",
+                  "question": "En SOQL dinamico, como reduces riesgo de inyeccion cuando entra texto de usuario?",
+                  "options": [
+                    "Usar bind variables cuando sea posible o escapar comillas simples.",
+                    "Quitar todos los espacios del input.",
+                    "Convertir todo a mayusculas.",
+                    "Cambiar SOQL por DML."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "El binding y escape correcto neutralizan fragmentos maliciosos en condiciones dinamicas.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q28",
+                  "question": "Quieres Accounts que tengan al menos una Opportunity abierta. Que patron SOQL aplica?",
+                  "options": [
+                    "Semi-join con Id IN (SELECT AccountId FROM Opportunity WHERE IsClosed = false)",
+                    "Anti-join con Id NOT IN (SELECT AccountId FROM Opportunity)",
+                    "SOSL sobre Account y Opportunity",
+                    "FOR UPDATE sobre Account"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "El semi-join devuelve padres cuya clave aparece en la subconsulta hija.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q29",
+                  "question": "Quieres Accounts sin ningun Contact relacionado. Que consulta expresa eso?",
+                  "options": [
+                    "WHERE Id NOT IN (SELECT AccountId FROM Contact WHERE AccountId != null)",
+                    "WHERE Id IN (SELECT AccountId FROM Contact)",
+                    "GROUP BY ContactId",
+                    "FOR UPDATE NOWAIT"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "El anti-join NOT IN filtra padres que no tienen hijos coincidentes.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q30",
+                  "question": "Cuando usarias FOR UPDATE en SOQL?",
+                  "options": [
+                    "Para bloquear registros y evitar colisiones durante una actualizacion critica.",
+                    "Para saltar reglas de validacion automaticamente.",
+                    "Para aumentar el limite de filas consultadas.",
+                    "Para ejecutar llamadas HTTP desde la consulta."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "FOR UPDATE aplica lock de fila hasta que termine la transaccion.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q31",
+                  "question": "En un trigger de Opportunity, como consultas Accounts relacionados de forma bulk?",
+                  "options": [
+                    "Recolectar AccountId en un Set y consultar Accounts con IN :setIds.",
+                    "Consultar Account por cada Opportunity dentro del loop.",
+                    "Usar solo Trigger.newMap sin ninguna SOQL.",
+                    "Crear un Batch Apex en cada iteracion."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "El patron Set + una consulta evita N consultas y escala en volumen.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q32",
+                  "question": "En Batch Apex, que puede devolver start para procesar hasta millones de filas?",
+                  "options": [
+                    "Database.QueryLocator",
+                    "List<SObject> fija de 100 elementos",
+                    "Trigger.new",
+                    "HttpResponse"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "QueryLocator permite manejar grandes volumenes en lotes sin cargar todo en memoria.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q33",
+                  "question": "Que ventaja tiene SOQL estatico frente a construir la consulta como String?",
+                  "options": [
+                    "Chequeo de campos y sintaxis en compilacion.",
+                    "No consume limites de consulta.",
+                    "Permite DML dentro de la consulta.",
+                    "Siempre es mas rapido que cualquier query dinamica."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "El compilador valida referencias y reduce errores por nombres incorrectos.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q34",
+                  "question": "Cual es el limite de filas consultadas por SOQL en una transaccion sincronica?",
+                  "options": [
+                    "10000",
+                    "50000",
+                    "100000",
+                    "Sin limite"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El limite total de query rows en sincronico es 50000.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q35",
+                  "question": "Que consideracion practica tiene usar OFFSET en SOQL?",
+                  "options": [
+                    "Tiene limite maximo y no es ideal para paginacion profunda.",
+                    "Aumenta el limite de CPU permitido.",
+                    "Funciona solo en triggers before insert.",
+                    "Permite saltar validaciones del objeto."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "OFFSET tiene tope y rendimiento decreciente en paginas altas.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q36",
+                  "question": "Quieres insertar o actualizar por un External Id sin conocer el Id de Salesforce. Que usas?",
+                  "options": [
+                    "upsert usando el campo External Id",
+                    "merge con OwnerId",
+                    "undelete con External Id",
+                    "truncate"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "upsert decide insertar o actualizar segun coincidencia de Id o External Id.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q37",
+                  "question": "Necesitas consolidar dos Accounts duplicadas y conservar relacionados. Que DML aplica?",
+                  "options": [
+                    "merge",
+                    "undelete",
+                    "upsert",
+                    "Database.emptyRecycleBin"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "merge combina duplicados en un registro maestro y reparenta relacionados compatibles.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q38",
+                  "question": "Un registro fue borrado y sigue en la papelera. Como lo recuperas en Apex?",
+                  "options": [
+                    "undelete",
+                    "upsert",
+                    "merge",
+                    "Database.rollback"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "undelete restaura registros desde recycle bin dentro de los limites de retencion.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q39",
+                  "question": "Que obtienes al usar Database.update(registros, false)?",
+                  "options": [
+                    "Una lista SaveResult con exito o error por registro.",
+                    "Rollback automatico total siempre.",
+                    "Un unico Boolean para toda la transaccion.",
+                    "Ignora reglas de validacion."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "SaveResult permite inspeccionar fallos individuales con allOrNone=false.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q40",
+                  "question": "Que pasa con un DML nativo 'insert lista;' si un registro falla validacion?",
+                  "options": [
+                    "Toda la operacion revierte por defecto.",
+                    "Solo falla el registro invalido y sigue el resto.",
+                    "Se convierte en upsert automaticamente.",
+                    "Se omiten triggers before."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "DML nativo usa allOrNone=true implicito y revierte la lista completa ante error.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q41",
+                  "question": "Necesitas deshacer varios cambios si una validacion final de negocio falla. Que mecanismo usas?",
+                  "options": [
+                    "Savepoint y rollback al savepoint.",
+                    "SOQL FOR UPDATE",
+                    "@testSetup",
+                    "SeeAllData=true"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Savepoint permite volver a un estado consistente dentro de la misma transaccion.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q42",
+                  "question": "Recibes MIXED_DML_OPERATION al crear User y Account en la misma transaccion. Solucion recomendada?",
+                  "options": [
+                    "Mover una parte a proceso asincrono separado.",
+                    "Usar merge en lugar de insert.",
+                    "Poner todo en una sola clase without sharing.",
+                    "Ejecutar mas queries antes del DML."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Separar Setup y no Setup en transacciones distintas evita mixed DML.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q43",
+                  "question": "En before update, quieres ajustar un campo del mismo registro. Que debes hacer?",
+                  "options": [
+                    "Modificar Trigger.new directamente sin DML extra.",
+                    "Llamar update Trigger.new dentro del trigger.",
+                    "Crear un future para actualizar el mismo registro.",
+                    "Usar undelete seguido de update."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "before update permite mutar el registro en memoria antes de guardar.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q44",
+                  "question": "En after insert de Opportunity debes crear Task relacionadas. Por que necesitas DML explicito?",
+                  "options": [
+                    "Porque son registros distintos a los de Trigger.new y deben insertarse.",
+                    "Porque after insert no permite construir listas.",
+                    "Porque Trigger.new es de solo lectura y bloquea cualquier DML.",
+                    "Porque Task solo se crea con merge."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Para objetos relacionados nuevos debes ejecutar insert sobre esa nueva lista.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q45",
+                  "question": "En un trigger update, como detectas que StageName cambio realmente?",
+                  "options": [
+                    "Comparar Trigger.newMap con Trigger.oldMap por Id.",
+                    "Revisar solo Trigger.isUpdate.",
+                    "Contar registros con Limits.getDmlRows().",
+                    "Usar una query por registro para leer valor viejo."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "oldMap contiene el estado previo y permite detectar cambios de campo con precision.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q46",
+                  "question": "Que hace Database.emptyRecycleBin sobre registros eliminados?",
+                  "options": [
+                    "Elimina permanentemente y no permite undelete.",
+                    "Solo marca como archivado temporal.",
+                    "Convierte delete en upsert.",
+                    "Restaura automaticamente el registro."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "emptyRecycleBin purga la papelera y quita opcion de restauracion.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q47",
+                  "question": "Quieres clonar un Account con relaciones cargadas en memoria para manipular copia. Que parametro es clave?",
+                  "options": [
+                    "isDeepClone=true",
+                    "preserveId=true",
+                    "preserveReadonlyTimestamps=true",
+                    "allOrNone=false"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "isDeepClone copia tambien objetos relacionados ya cargados en memoria.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q48",
+                  "question": "Necesitas asignar dinamicamente un campo por nombre en runtime. Que metodo usas?",
+                  "options": [
+                    "sObject.put('Campo__c', valor)",
+                    "sObject.setFieldDirect('Campo__c', valor)",
+                    "sObject.assign('Campo__c', valor)",
+                    "JSON.putField('Campo__c', valor)"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "put/get permiten acceso dinamico a campos sin referencia estatica.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q49",
+                  "question": "Que opcion ayuda a reforzar seguridad de campos antes de exponer o persistir datos?",
+                  "options": [
+                    "Security.stripInaccessible",
+                    "System.debug",
+                    "Limits.getHeapSize",
+                    "Database.countQuery"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "stripInaccessible elimina campos sin permiso segun contexto de acceso.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q50",
+                  "question": "Que validacion evita NullPointer al navegar relaciones opcionales, por ejemplo acc.Parent.Name?",
+                  "options": [
+                    "Comprobar que ParentId o Parent no sea null antes de acceder Name.",
+                    "Convertir Name a Integer primero.",
+                    "Llamar update acc antes de leer Parent.",
+                    "Usar merge con Parent."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "La comprobacion null previa evita desreferenciar objetos inexistentes.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q51",
+                  "question": "Por que se recomienda un solo trigger por objeto?",
+                  "options": [
+                    "Centraliza flujo y evita orden impredecible entre multiples triggers.",
+                    "Aumenta automaticamente el limite de SOQL.",
+                    "Impide recursion en todos los casos sin codigo.",
+                    "Elimina necesidad de pruebas unitarias."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Un punto de entrada unico mejora mantenibilidad y control del comportamiento.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q52",
+                  "question": "En un framework de triggers, cual es una practica comun para legibilidad?",
+                  "options": [
+                    "Delegar a una clase handler con metodos por contexto.",
+                    "Poner toda la logica en una sola linea del trigger.",
+                    "Usar solo variables globales compartidas.",
+                    "Ejecutar callouts directos en before insert."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Separar trigger y handler permite pruebas, reutilizacion y menor complejidad ciclica.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q53",
+                  "question": "Para evitar recursion en updates encadenados, que enfoque es mas robusto?",
+                  "options": [
+                    "Usar static Set<Id> de registros procesados y verificar cambios reales.",
+                    "Usar solo un static Boolean global para siempre.",
+                    "Ignorar recursion porque Salesforce la evita automaticamente.",
+                    "Forzar rollback en cada iteracion."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "El Set por Id controla granularidad y evita bloquear procesamiento legitimo.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q54",
+                  "question": "En que contexto Trigger.newMap NO esta disponible?",
+                  "options": [
+                    "before insert",
+                    "before update",
+                    "after update",
+                    "after undelete"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "newMap requiere Ids asignados, por eso no existe en before insert.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q55",
+                  "question": "En que evento Trigger.oldMap no existe?",
+                  "options": [
+                    "insert",
+                    "update",
+                    "delete",
+                    "undelete"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "oldMap representa estado previo y no aplica cuando el registro se inserta por primera vez.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q56",
+                  "question": "Trigger de Case necesita datos de Account para todos los registros. Patron correcto?",
+                  "options": [
+                    "Recolectar AccountId unicos y consultar Accounts una vez.",
+                    "Consultar Account por cada Case en el for.",
+                    "Usar merge entre Case y Account.",
+                    "Llamar future por cada Case."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Bulk query sobre Ids unicos minimiza consultas y costo de CPU.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q57",
+                  "question": "Debes actualizar muchos padres desde un trigger hijo. Que estrategia evita limite de DML?",
+                  "options": [
+                    "Acumular padres en lista/mapa y hacer un solo update.",
+                    "Hacer update inmediato por cada hijo.",
+                    "Usar undelete en padres.",
+                    "Insertar logs en cada iteracion con DML individual."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Agrupar DML en lote reduce sentencias y mejora rendimiento.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q58",
+                  "question": "Que hace addError en un trigger before cuando se cumple una regla?",
+                  "options": [
+                    "Bloquea guardado del registro afectado y muestra mensaje.",
+                    "Guarda igual pero agrega warning silencioso.",
+                    "Desactiva validaciones del objeto.",
+                    "Convierte insert en upsert."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "addError marca el registro como invalido y evita su confirmacion.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q59",
+                  "question": "Necesitas hacer callout por cada Opportunity creada desde trigger. Arquitectura recomendada?",
+                  "options": [
+                    "Encolar Queueable/future con callout=true y pasar Ids.",
+                    "Hacer HTTP callout directo en trigger after insert.",
+                    "Usar merge antes del callout.",
+                    "Usar Test.startTest en produccion."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Los triggers no permiten callout directo; se delega a contexto asincrono.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q60",
+                  "question": "Que efecto puede tener una Workflow Rule o Flow que actualiza campos tras DML inicial?",
+                  "options": [
+                    "Puede disparar nuevamente triggers de update en la misma transaccion.",
+                    "Deshabilita todos los triggers restantes.",
+                    "Elimina registros de Trigger.oldMap.",
+                    "Incrementa limite de DML a 500."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "El orden de ejecucion incluye pasos que pueden causar reentrada en update.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q61",
+                  "question": "Que mejora aporta switch on Trigger.operationType en handlers?",
+                  "options": [
+                    "Ramas explicitas por evento y codigo mas mantenible.",
+                    "Evita necesidad de clases auxiliares.",
+                    "Reemplaza pruebas unitarias.",
+                    "Permite callout en before insert."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "OperationType evita condicionales dispersos y hace el flujo mas claro.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q62",
+                  "question": "Un trigger after undelete de Case suele usarse para que caso?",
+                  "options": [
+                    "Restaurar banderas o registros relacionados dependientes.",
+                    "Crear Id nuevo para el registro recuperado.",
+                    "Evitar que vuelva desde recycle bin.",
+                    "Convertirlo automaticamente en Account."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "after undelete permite ejecutar logica de reactivacion post restauracion.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q63",
+                  "question": "Si insertas 400 registros por API, como se comporta normalmente un trigger?",
+                  "options": [
+                    "Se procesa en lotes de hasta 200 por transacciones separadas.",
+                    "Siempre procesa los 400 en una sola ejecucion.",
+                    "Solo ejecuta before, nunca after.",
+                    "Ignora governor limits para cargas API."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Salesforce trocea lotes grandes; cada transaccion aplica limites propios.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q64",
+                  "question": "Que metodo de Limits te ayuda a monitorear consumo de queries durante depuracion?",
+                  "options": [
+                    "Limits.getQueries()",
+                    "Limits.getDmlRows()",
+                    "Limits.getLimitHeapSize()",
+                    "Limits.getCpuTime() devuelve numero de queries"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "getQueries devuelve consultas usadas y permite comparar contra getLimitQueries.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q65",
+                  "question": "Tienes recursion entre trigger de Contact y trigger de Account por actualizaciones cruzadas. Mitigacion clave?",
+                  "options": [
+                    "Controlar cambios reales + static Set<Id> para evitar reprocesar.",
+                    "Agregar mas queries para sincronizar estados.",
+                    "Mover toda logica a Visualforce.",
+                    "Usar SeeAllData=true en produccion."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Combinar deteccion de cambios y guardas de recursion corta bucles infinitos.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q66",
+                  "question": "Cual es el limite de sentencias DML por transaccion Apex?",
+                  "options": [
+                    "100",
+                    "150",
+                    "200",
+                    "500"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El limite de sentencias DML por transaccion es 150.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q67",
+                  "question": "Cual es el limite de filas procesadas por DML en una transaccion?",
+                  "options": [
+                    "5000",
+                    "10000",
+                    "50000",
+                    "Sin limite"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "Se pueden procesar hasta 10000 filas por DML en una transaccion.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q68",
+                  "question": "Cuantos callouts HTTP maximos permite una transaccion Apex?",
+                  "options": [
+                    "10",
+                    "50",
+                    "100",
+                    "200"
+                  ],
+                  "correctIndex": 2,
+                  "explanation": "El limite de callouts por transaccion es 100.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q69",
+                  "question": "Cual es el limite aproximado de CPU en transaccion Apex sincronica?",
+                  "options": [
+                    "5000 ms",
+                    "10000 ms",
+                    "30000 ms",
+                    "60000 ms"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "El limite sincronico de CPU es 10 segundos, por eso importa optimizar loops y queries.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q70",
+                  "question": "Cual es el limite de heap en contexto Apex sincronico (aprox)?",
+                  "options": [
+                    "3 MB",
+                    "6 MB",
+                    "12 MB",
+                    "24 MB"
+                  ],
+                  "correctIndex": 1,
+                  "explanation": "En sincronico el heap es menor que en asincrono, por eso conviene procesar en lotes.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q71",
+                  "question": "Debes procesar millones de registros nocturnamente con tolerancia a reintentos. Que tecnologia eliges?",
+                  "options": [
+                    "Batch Apex",
+                    "Trigger before insert",
+                    "Validation Rule",
+                    "Formula field"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Batch Apex divide trabajo en ejecuciones pequenas con limites reiniciados por lote.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q72",
+                  "question": "En Batch Apex, que opcion de start es ideal para tablas grandes?",
+                  "options": [
+                    "Database.getQueryLocator",
+                    "List<String> manual",
+                    "Trigger.oldMap",
+                    "JSON.deserializeUntyped"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "QueryLocator soporta volumen masivo con manejo eficiente por plataforma.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q73",
+                  "question": "Cual es el tamano por defecto del scope en execute de Batch Apex?",
+                  "options": [
+                    "50",
+                    "100",
+                    "200",
+                    "500"
+                  ],
+                  "correctIndex": 2,
+                  "explanation": "Si no especificas otro valor, batch usa scope 200.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q74",
+                  "question": "Para acumular contadores entre ejecuciones de batch, que interfaz agregas?",
+                  "options": [
+                    "Database.Stateful",
+                    "Schedulable",
+                    "Queueable",
+                    "Comparable"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Stateful conserva estado de instancia entre llamadas execute del mismo job.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q75",
+                  "question": "Que restriccion clave tienen los metodos @future?",
+                  "options": [
+                    "Deben ser static void y recibir tipos primitivos o colecciones de primitivos.",
+                    "Pueden retornar SaveResult[]",
+                    "Pueden aceptar sObjects completos como parametro.",
+                    "Se ejecutan dentro del mismo hilo del trigger."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Future impone firma acotada para serializacion y ejecucion diferida.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q76",
+                  "question": "Cuando elegir Queueable sobre @future?",
+                  "options": [
+                    "Cuando necesitas objetos complejos, mejor seguimiento y posible encadenamiento.",
+                    "Cuando quieres ejecutar DML en before insert.",
+                    "Cuando no quieres pruebas unitarias.",
+                    "Cuando necesitas evitar todo governor limit."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Queueable es mas flexible y observable que future para trabajos asincronos.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q77",
+                  "question": "Que debe implementar una clase para ejecutarse con System.schedule?",
+                  "options": [
+                    "Schedulable",
+                    "Database.Batchable",
+                    "Iterable<SObject>",
+                    "HttpCalloutMock"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "System.schedule invoca el metodo execute de una clase Schedulable.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q78",
+                  "question": "Para probar codigo asincrono en unit tests, que secuencia se usa normalmente?",
+                  "options": [
+                    "Test.startTest(); ejecutar; Test.stopTest();",
+                    "Solo Test.isRunningTest();",
+                    "System.schedule en produccion y luego assert.",
+                    "SeeAllData=true con sleep."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "stopTest fuerza ejecucion de trabajos asincronos encolados durante la prueba.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q79",
+                  "question": "Para evitar IDs hardcodeados en logica configurable, que alternativa es preferible?",
+                  "options": [
+                    "Custom Metadata Types para parametros por entorno.",
+                    "Constantes con Id en cada clase.",
+                    "Comentarios en codigo indicando cambiar luego.",
+                    "SeeAllData=true para localizar Ids reales."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Custom Metadata permite configuracion desplegable sin editar codigo.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q80",
+                  "question": "Que pasa con variables static cuando inicia una nueva transaccion?",
+                  "options": [
+                    "Se reinician; no conservan valor entre transacciones.",
+                    "Persisten por usuario durante 24 horas.",
+                    "Se guardan en Custom Setting automaticamente.",
+                    "Solo se reinician en Sandbox, no en Produccion."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Static sirve para estado temporal por transaccion, no como almacenamiento persistente.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q81",
+                  "question": "Que beneficio tiene marcar una clase como @isTest?",
+                  "options": [
+                    "No cuenta contra el limite de tamano de codigo de produccion.",
+                    "Se ejecuta automaticamente en cada login.",
+                    "Permite omitir asserts.",
+                    "Ignora sharing y seguridad siempre."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Las clases de prueba estan separadas del limite de codigo Apex productivo.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q82",
+                  "question": "Para datos reutilizados por varios metodos de prueba en una clase, que anotacion ayuda?",
+                  "options": [
+                    "@testSetup",
+                    "@future",
+                    "@InvocableMethod",
+                    "@AuraEnabled"
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "@testSetup crea datos base una vez y mejora velocidad y consistencia de tests.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q83",
+                  "question": "Cual es la practica recomendada para aislamiento de pruebas respecto a datos de org?",
+                  "options": [
+                    "Mantener SeeAllData=false y crear datos de prueba propios.",
+                    "Usar siempre SeeAllData=true para simplificar.",
+                    "Depender de datos de Produccion clonados.",
+                    "Evitar inserts en tests."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Pruebas aisladas son repetibles y no dependen del estado mutable del org.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q84",
+                  "question": "Cuando usarias System.runAs en una prueba?",
+                  "options": [
+                    "Para validar comportamiento dependiente de sharing/permisos por usuario.",
+                    "Para aumentar limites de CPU.",
+                    "Para ejecutar callouts reales.",
+                    "Para evitar crear usuarios de prueba."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "runAs permite simular contexto de usuario y verificar acceso a datos.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q85",
+                  "question": "Como pruebas una clase Apex que hace HTTP callout?",
+                  "options": [
+                    "Registrando un mock con Test.setMock(HttpCalloutMock, ...).",
+                    "Haciendo callout real a internet desde test.",
+                    "Deshabilitando todos los asserts.",
+                    "Marcando la clase with sharing."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Los tests no deben depender de red externa; los mocks controlan respuesta y determinismo.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q86",
+                  "question": "Quieres validar que 2 de 5 registros fallen por regla de negocio y 3 pasen. Enfoque util?",
+                  "options": [
+                    "Usar Database.insert(lista, false) y revisar SaveResult por indice.",
+                    "Usar insert lista y asumir fallas parciales.",
+                    "Evitar asserts sobre errores.",
+                    "Solo revisar debug logs."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "SaveResult permite afirmar exitos y errores individuales de forma precisa.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q87",
+                  "question": "Para probar bulkificacion de trigger, que dataset minimo tiene sentido?",
+                  "options": [
+                    "Al menos 200 registros en una sola operacion DML.",
+                    "Solo 1 registro porque es mas rapido.",
+                    "2 registros en transacciones separadas.",
+                    "No insertar datos, solo mocks."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Un lote grande revela problemas de consultas/DML dentro de bucles.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q88",
+                  "question": "Que efecto tiene Test.startTest sobre governor limits dentro de una prueba?",
+                  "options": [
+                    "Reinicia contadores para medir la parte principal bajo limites limpios.",
+                    "Duplica permanentemente todos los limites.",
+                    "Deshabilita limites hasta stopTest.",
+                    "No tiene ningun efecto."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "startTest separa preparacion de ejecucion real y reinicia consumo de limites.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q89",
+                  "question": "Que ocurre al llamar Test.stopTest despues de encolar Queueable/Future en test?",
+                  "options": [
+                    "Se ejecutan trabajos asincronos pendientes para poder afirmarlos.",
+                    "Se borran todos los jobs en cola.",
+                    "El test finaliza sin ejecutar logs.",
+                    "Se fuerza rollback del metodo completo."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "stopTest es el punto donde la plataforma drena trabajo asincrono en pruebas.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q90",
+                  "question": "Que afirmacion representa una buena asercion de prueba?",
+                  "options": [
+                    "Verificar campos y estado esperado tras ejecutar la logica.",
+                    "Solo confirmar que no hubo excepcion.",
+                    "Imprimir debug y no usar asserts.",
+                    "Comparar con datos de Produccion."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Una prueba robusta confirma resultados de negocio, no solo ausencia de errores.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q91",
+                  "question": "Que aporta una Test Data Factory en proyectos Apex medianos o grandes?",
+                  "options": [
+                    "Centraliza creacion de datos y reduce duplicacion en tests.",
+                    "Elimina necesidad de @isTest.",
+                    "Evita usar DML en pruebas.",
+                    "Aumenta coverage sin ejecutar tests."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Factories mejoran mantenibilidad y consistencia de escenarios de prueba.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q92",
+                  "question": "En System.assertEquals(expected, actual), cual orden es correcto?",
+                  "options": [
+                    "Primero expected, luego actual.",
+                    "Primero actual, luego expected.",
+                    "No importa el orden para mensajes de fallo.",
+                    "Se usa solo en triggers."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Mantener expected primero mejora lectura de diffs cuando una prueba falla.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q93",
+                  "question": "Despues de un update en test, por que suele ser buena practica reconsultar el registro?",
+                  "options": [
+                    "Para validar estado realmente persistido en base de datos.",
+                    "Para aumentar cobertura automaticamente.",
+                    "Porque Trigger.new sigue disponible fuera del trigger.",
+                    "Para evitar asserts."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Requery evita confiar en objetos en memoria que podrian no reflejar estado final.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q94",
+                  "question": "Tus asserts dependen del orden de resultados SOQL. Que debes hacer para estabilidad?",
+                  "options": [
+                    "Agregar ORDER BY explicito en la consulta.",
+                    "Confiar en orden natural de insercion.",
+                    "Usar SeeAllData=true",
+                    "Eliminar la consulta y usar debug."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Sin ORDER BY el orden puede variar; declarar orden evita flakiness.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q95",
+                  "question": "Que requisito de cobertura aplica para despliegue Apex en produccion?",
+                  "options": [
+                    "Al menos 75% de cobertura total y cada trigger debe tener cobertura.",
+                    "100% de cobertura por clase obligatoria.",
+                    "Solo se mide cobertura de tests nuevos.",
+                    "No hay requisito si se usa Scratch Org."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "La regla de despliegue exige umbral global y cobertura efectiva de triggers.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q96",
+                  "question": "Escenario: before insert en Opportunity debe poner CloseDate a hoy+30 si viene vacio. Donde hacerlo?",
+                  "options": [
+                    "En trigger before insert asignando Trigger.new[i].CloseDate.",
+                    "En trigger after insert con update por registro.",
+                    "En un @future por cada oportunidad.",
+                    "En SOSL previo al insert."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Es un valor del mismo registro al guardar; before insert evita DML adicional.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q97",
+                  "question": "Escenario: deduplicar Contact por Email en before insert de forma bulk. Patron correcto?",
+                  "options": [
+                    "Normalizar emails en Set, consultar una vez, y usar addError en coincidencias.",
+                    "Consultar Contact por cada registro nuevo.",
+                    "Hacer callout a servicio externo dentro del trigger.",
+                    "Insertar todos y limpiar duplicados despues."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Set + consulta unica + addError mantiene bulkificacion y bloquea duplicados antes de guardar.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q98",
+                  "question": "Escenario: al crear Task, actualizar Last_Activity__c en Account padre. Solucion escalable?",
+                  "options": [
+                    "Agrupar AccountIds, calcular max fecha por cuenta, y hacer un update masivo.",
+                    "Actualizar Account en cada iteracion de Task.",
+                    "Usar undelete en Account para refrescar fecha.",
+                    "Crear un trigger separado por cada campo."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "El enfoque agregado minimiza DML/queries y mantiene precision por cuenta.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q99",
+                  "question": "Escenario: proceso crea User y luego Account, y falla por Mixed DML. Alternativa valida?",
+                  "options": [
+                    "Separar una parte en Queueable/Future para usar transaccion distinta.",
+                    "Usar savepoint antes de crear User.",
+                    "Cambiar Account por Contact para evitar regla.",
+                    "Ejecutar todo en test context."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Mixed DML se resuelve separando setup y no setup en transacciones diferentes.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                },
+                {
+                  "id": "q100",
+                  "question": "Escenario: import masivo de Leads con External Id y errores parciales esperados. Mejor implementacion?",
+                  "options": [
+                    "Database.upsert(lista, External_Id__c, false) y registrar SaveResult fallidos.",
+                    "upsert nativo sin revisar resultados.",
+                    "insert por cada Lead con try/catch vacio.",
+                    "merge de Leads por lotes de 1."
+                  ],
+                  "correctIndex": 0,
+                  "explanation": "Upsert con allOrNone=false permite continuar y auditar cada error de carga.",
+                  "hint": "Piensa en limites, contexto de ejecucion y patrones bulk."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
