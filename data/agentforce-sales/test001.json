@@ -13,7 +13,7 @@
           "description": "Best practices for activities, tasks, and team selling.",
           "quizzes": [
             {
-              "id": "sales-productivity-collaboration-002",
+              "id": "sales-productivity-collaboration-0023",
               "quizNumber": "002",
               "title": "Advanced Productivity and Activities Configuration",
               "description": "Assess advanced Salesforce configuration across To Do List, Shared Activities, calendars, and email integration.",
